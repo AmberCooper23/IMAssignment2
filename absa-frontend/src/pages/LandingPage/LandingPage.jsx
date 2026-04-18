@@ -1,5 +1,5 @@
 import React from "react";
-// import Navbar from "../../components/NavBar/NavBar";
+import Navbar from "../../components/NavBar/NavBar";
 import "./LandingPage.css";
 
 // Image Imports
@@ -9,10 +9,10 @@ import contextImage from "../../assets/apartmentView.png";
 function LandingPage() {
   return (
     <main>
-    {/* <Navbar /> */}
+    <Navbar />
 
     <header className="hero">
-    <section>
+    <section >
         <p className="preHeroText">Built for South African Young Professionals</p>
         <h1 className="heroTitle">Design Your First Five Years of Wealth</h1>
         <p className="heroSubtitle"> A gamified, narrative driven companion to help you navigate property, investments, and lifestyle choices with confidence.</p>
