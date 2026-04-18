@@ -1,18 +1,3 @@
-/* html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-}
-
-main {
-    width: 100%;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
-
 .hero {
     display: flex;
     align-items: center;
@@ -115,19 +100,26 @@ main {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    padding: 2rem;
+    padding: 4rem;
     background: white;
 }
 
+.contextContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 2;
+}
+
 .contextTitle {
-   font-size: 1.5rem;
+   font-size: 1.8rem;
    font-weight: bold;
-   margin-bottom: 0.5rem;
+   margin-bottom: 1rem;
 }
 
 .contextText {
-    font-size: 0.9rem;
-    margin-bottom: 0.2rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
     max-width: 600px;
     text-align: left;
 }
@@ -136,7 +128,7 @@ main {
     list-style: none;
     padding: 0;
     display: flex;
-    margin-top: 0.1rem;
+    margin-top: 0.3rem;
 }
 
 .contextCriteriaContainer {
@@ -147,7 +139,7 @@ main {
 }
 
 .contextCriteriaTitle {
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: bolder;
     text-align: left;
     color: black;
@@ -156,13 +148,18 @@ main {
 }
 
 .contextCriteriaSubtitle {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     text-align: left;
     line-height: normal;
 }
 
+.contextImage {
+    flex: 2;
+}
+
 .contextImage img {
     border-radius: 10px;
+    width: 100%;
 }
 
 .ctaFooter {
