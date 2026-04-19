@@ -1,5 +1,7 @@
 import React from "react";
 import Navbar from "../../components/NavBar/NavBar";
+import FeatureCard from "../../components/FeatureCard/FeatureCard";
+
 import "./LandingPage.css";
 
 // Image Imports
@@ -48,9 +50,35 @@ function LandingPage() {
     </p>
 
     <section className="featureSection">
-        {/* <FeatureCard /> */}
-        {/* <FeatureCard /> */}
-        {/* <FeatureCard /> */}        
+        <FeatureCard
+        title="Money Snapshot"
+        description="Your financial 'character sheet' with income, expenses, debts, and savings - gamified and visual."
+        items={[
+            "SARS tax estimates",
+            "RA & Medical Aid tracking",
+            "Narrative Insights"
+        ]}
+        />
+        <FeatureCard
+        title="Strategy Tracks"
+        description="Choose your archetype and follow a curated 5 year path with milestones and nudges."
+        items={[
+            "The Builder (Property Focus)",
+            "The Explorer (Balanced)",
+            "The Maverick (Offshore)"
+        ]}
+        />
+
+        <FeatureCard
+        title="Simulation Lab"
+        description="Test financial decisions with interactive scenarios and ssee the 5 year impact"
+        items={[
+            "Property vs Renting",
+            "Luxury Card vs Investment",
+            "Local vs Offshore"
+        ]}
+        />
+
     </section>
 
     <section className="contextSection">
