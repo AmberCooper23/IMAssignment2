@@ -1,9 +1,10 @@
 .navBar{
-    /* width: 100%; */
+    width: 96%;
     padding: 1rem 2rem;
     background-color: white;
     display: flex;
     justify-content: space-between;
+    position: fixed;
 }
 
 .navLinks {
@@ -12,10 +13,11 @@
     gap: 2rem;
     margin: 0;
     padding: 0;
+    flex: 1;
 }
 
 .navItem {
-color:red;
+color:grey;
 text-decoration: none;
 }
 
