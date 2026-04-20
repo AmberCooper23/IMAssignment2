@@ -1,0 +1,25 @@
+.moneySnapshotCard {
+    padding: 2rem;
+    align-items: left;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    flex: 1;
+}
+
+.moneySnapshotCardTitle {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.moneySnapshotCardNumber {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.moneySnapshotCardSubtitle {
+    font-size: 0.9rem;
+    color: #666;
+}

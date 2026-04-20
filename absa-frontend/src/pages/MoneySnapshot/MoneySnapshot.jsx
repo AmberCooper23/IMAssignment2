@@ -1,5 +1,6 @@
 import React from "react";
 import "./MoneySnapshot.css";
+import MoneySnapshotCard from "../../components/MoneySnapshotCard/MoneySnapshotCard";
 
 function MoneySnapshot() {
 return (
@@ -20,10 +21,31 @@ return (
         </section>
 
         <section className="moneySnapshotCardContainer">
-            {/* <MoneySnapshotCard/>
-            <MoneySnapshotCard/>
-            <MoneySnapshotCard/>
-            <MoneySnapshotCard/> */}
+
+            <MoneySnapshotCard 
+            title="Monthly Income"
+            number="R45, 000"
+            subtitle="Before deductions"
+            />
+
+            <MoneySnapshotCard
+            title="Take Home"
+            number="R30, 500"
+            subtitle="After tax & deductions"
+            />
+
+            <MoneySnapshotCard
+            title="Savings Rate"
+            number="19.7%"
+            subtitle="Of take-home pay"
+            />
+
+            <MoneySnapshotCard
+            title="Total Debt"
+            number="365k"
+            subtitle="Student + Car finance"
+            />
+
         </section>
         <section className="moneySnapshotGraphs">
             {/* <MoneySnapshotGraph/>
