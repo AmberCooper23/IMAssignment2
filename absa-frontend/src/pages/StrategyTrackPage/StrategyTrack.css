@@ -51,3 +51,37 @@
     margin-top: 2rem;
 }
 
+.blueStratCard {
+    background-color: #0896a5;
+}
+
+.blueStratCard li {
+    background-color: white;
+}
+.blueStratCard li::marker {
+color: #0896a5;
+}
+
+.greenStratCard {
+    background-color: #22972a;
+}
+
+.greenStratCard li {
+    background-color: white;
+}
+
+.greenStratCard li::marker {
+color: #22972a;
+}
+
+.orangeStratCard {
+    background-color: #f18e04;
+}
+
+.orangeStratCard li {
+    background-color: white;
+}
+
+.orangeStratCard li::marker {
+    color: #f18e04;
+}

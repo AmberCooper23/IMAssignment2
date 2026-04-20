@@ -1,5 +1,6 @@
 import React from "react";
 import CTACard from "../../components/ctaCard/ctaCard";
+import StrategyTrackCard from "../../components/StrategyTrackCard/StrategyTrackCard";
 import "./StrategyTrack.css";
 
 function StrategyTrack() {
@@ -24,7 +25,55 @@ function StrategyTrack() {
         </section>
 
         <section className="trackCardContainer">
-            {/* Strategy Track Card */}
+            <StrategyTrackCard
+            strategyTrack="First Property Path"
+            archetype="The Builder"
+            description="Focus on saving for property deposit and building credit for bond approval"
+            priorities={[
+                "Save for deposit",
+                "Building credit",
+                "Minimising lifestyle creep"
+            ]}
+            milestones={[
+                "Emergency Fund",
+                "Deposit Ready",
+                "Bond Approval"
+            ]}
+            className="blueStratCard"
+            />
+            <StrategyTrackCard
+            strategyTrack="Balanced Lifestyle & Investing"
+            archetype="The Explorer"
+            description="Balance lifestyle enjoyment with steady local investments and offshore diversification"
+            priorities={[
+                "Lifestyle balance",
+                "Local investments",
+                "Gradual offshore allocation"
+            ]}
+            milestones={[
+                "RA Contributions",
+                "Balanced Portfolio",
+                "Offshore Start"
+            ]}
+            className="greenStratCard"
+            />
+            <StrategyTrackCard
+            strategyTrack="Aggressive Global Investor"
+            archetype="The Maverick"
+            description="Maximise offshore exposure and tech stocks for long term wealth building"
+            priorities={[
+                "Offshore ETFs",
+                "Tech stocks",
+                "Aggressive growth"
+            ]}
+            milestones={[
+                "Max RA",
+                "Offshore Allocation",
+                "Tech Exposure"
+            ]}
+            className="orangeStratCard"
+            />
+
         </section>
 
         <section className="trackComparisonContainer">

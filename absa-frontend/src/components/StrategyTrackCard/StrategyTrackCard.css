@@ -1,0 +1,60 @@
+.stratTrackCard {
+    flex: 1;
+    border-radius: 10px;
+    /* padding: 1.5rem; */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+}
+
+.stratTrackCardHeader {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    min-height: 70px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.stratTrackCardTitle {
+    flex: 1;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: white;
+    padding: 0.5rem;
+}
+
+.stratTrackCardArchetype {
+    flex: 1;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: white;
+    padding: 0.5rem;
+}
+
+.stratTrackDescription {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.stratTrackCardPriorities {
+    padding: 0;
+    margin: 0;
+    margin-top: auto;
+    list-style: none;
+}
+
+.stratTrackCardMilestones {
+    padding: 0;
+    margin: 0;
+    margin-top: auto;
+}
+
+.stratTrackCardMilestoneItem {
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+
+}
+
