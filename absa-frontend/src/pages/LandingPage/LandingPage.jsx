@@ -126,11 +126,6 @@ function LandingPage() {
         </p>
         <button className="ctaFooterButton">Begin Your Journey!</button>
     </section>
-
-    <footer className="footer">
-    {/* <Logo/> */}
-    <p className="footerText">© 2026 ABSA. Your Story Matters. </p>
-    </footer>
     </main>
   );
 }

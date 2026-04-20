@@ -193,17 +193,6 @@
     font-weight: bold;
 }
 
-.footer {
-    background-color: black;
-    min-height: 3rem;
-}
-
-.footerText {
-    color: white;
-    font-size: 0.9rem;
-    text-align: right;
-    padding: 1rem;
-}
 
 .featureSection {
     display: flex;
