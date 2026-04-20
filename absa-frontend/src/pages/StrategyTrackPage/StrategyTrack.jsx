@@ -1,0 +1,36 @@
+import React from "react";
+
+function StrategyTrack() {
+    return (
+        <main className="strategyTrack">
+        <header className="strategyTrackHeader">
+            <h1 className="strategyTrackTitle">Strategy Track</h1>
+            <p className="strategyTrackSubtitle">
+                Choose your financial archetype and follow a curated 5 year plan
+            </p>
+        </header>
+
+        <section className="chooseJourney">
+            <h1 className="chooseJourneyTitle">
+            <p className="chooseJourneyText">
+                Each track is designed for different financial goals and priorities. Select the one that resonates with your current situation and aspirations. You can switch tracks anytime as your priorities evolve.
+            </p>
+            </h1>
+        </section>
+
+        <section className="trackCardContainer">
+            {/* Strategy Track Card */}
+        </section>
+
+        <section className="trackComparisonContainer">
+            {/* Comparison Table */}
+        </section>
+
+        <section className="ctaCardContainer">
+            {/* ctaCards */}
+        </section>
+        </main>
+    );
+}
+
+export default StrategyTrack;
