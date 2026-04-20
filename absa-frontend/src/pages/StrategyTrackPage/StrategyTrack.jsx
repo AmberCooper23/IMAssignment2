@@ -14,10 +14,13 @@ function StrategyTrack() {
 
         <section className="chooseJourney">
             <h1 className="chooseJourneyTitle">
-            <p className="chooseJourneyText">
-                Each track is designed for different financial goals and priorities. Select the one that resonates with your current situation and aspirations. You can switch tracks anytime as your priorities evolve.
-            </p>
+                Choose Your Journey
             </h1>
+            <ul className="chooseJourneyText">
+            <li>
+                Each track is designed for different financial goals and priorities. Select the one that resonates with your current situation and aspirations. You can switch tracks anytime as your priorities evolve.
+            </li>
+            </ul>
         </section>
 
         <section className="trackCardContainer">
