@@ -1,0 +1,105 @@
+.moneySnapshot {
+    margin-top: 3rem;
+    padding: 2rem;
+}
+
+.snapshotTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.snapshotSubtitle {
+    font-size: 1.2rem;
+    text-align: left; 
+    margin-top: 0rem;
+}
+
+.financialStoryContainer {
+    background-color: rgba(230, 157, 157, 0.466);
+    border-radius: 10px;
+    border-left: 4px red solid;
+}
+
+.storyTitle {
+    font-size: 1.5rem;
+    text-align: left;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    margin-bottom: 0;
+}
+
+.storyText {
+    font-size: 0.95rem;
+    text-align: left;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    color: rgb(59, 59, 59);
+    white-space: pre-line;
+    list-style: none;
+}
+
+.moneySnapshotCardContainer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.moneySnapshotGraphs {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.savingsAndDebtContainer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.ctaCardContainer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.ctaCard {
+    flex: 1;
+    border-radius: 10px;
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.blueCard {
+    background-color: #b6e8ee30;
+    box-shadow: #aadbe1 0px 4px 8px -2px;
+    background: linear-gradient(to bottom right, #b6e8ee9e, #b6e8ee41);
+}
+
+.greenCard {
+    background-color: #ceefd05f;
+    box-shadow: #c7f1c9 0px 4px 8px -2px;
+    background: linear-gradient(to bottom right, #ceefd09e, #ceefd041);
+}
+
+.orangeCard {
+    background-color: #f1ddbb4c;
+    box-shadow: #f1ddbb 0px 4px 8px -2px;
+    background: linear-gradient(to bottom right, #f1ddbb9e, #f1ddbb22);
+}
+
+.ctaTitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+
+.ctaText {
+    font-size: 0.95rem;
+    text-align: left;
+    color: rgb(59, 59, 59);
+    white-space: pre-line;
+    margin-bottom: 2rem;
+}
