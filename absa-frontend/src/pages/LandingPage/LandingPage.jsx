@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../../components/NavBar/NavBar";
 import FeatureCard from "../../components/FeatureCard/FeatureCard";
 
 import "./LandingPage.css";
@@ -11,7 +10,6 @@ import contextImage from "../../assets/apartmentView.png";
 function LandingPage() {
   return (
     <main>
-    <Navbar />
 
     <header className="hero">
     <section >
