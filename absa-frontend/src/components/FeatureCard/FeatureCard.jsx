@@ -1,9 +1,9 @@
 import React from "react";
 import "./FeatureCard.css";
 
-function FeatureCard({ title, description, items }) {
+function FeatureCard({ title, description, items, className }) {
     return (
-        <article className="featureCard">
+        <article className={`featureCard ${className || ""}`}>
             {/* <figure className="featureIcon">
                 <img src={icon} alt={`${title} icon`} />
             </figure> */}

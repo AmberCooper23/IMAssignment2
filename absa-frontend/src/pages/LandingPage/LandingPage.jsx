@@ -58,6 +58,7 @@ function LandingPage() {
             "RA & Medical Aid tracking",
             "Narrative Insights"
         ]}
+        className="blueCard"
         />
         <FeatureCard
         title="Strategy Tracks"
@@ -67,6 +68,7 @@ function LandingPage() {
             "The Explorer (Balanced)",
             "The Maverick (Offshore)"
         ]}
+        className="greenCard"
         />
 
         <FeatureCard
@@ -77,6 +79,7 @@ function LandingPage() {
             "Luxury Card vs Investment",
             "Local vs Offshore"
         ]}
+        className="orangeCard"
         />
 
     </section>
