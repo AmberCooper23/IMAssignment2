@@ -1,6 +1,8 @@
 import React from "react";
 import "./MoneySnapshot.css";
+
 import MoneySnapshotCard from "../../components/MoneySnapshotCard/MoneySnapshotCard";
+import CTACard from "../../components/ctaCard/ctaCard";
 
 function MoneySnapshot() {
 return (
@@ -61,25 +63,23 @@ return (
         <section className="RecentAchievementsContainer">
             {/* <RecentAchievements/> */}
         </section>
+
         <section className="ctaCardContainer">
-            <article className="ctaCard blueCard">
-                <h1 className="ctaTitle">Strategy Track</h1>
-                <p className="ctaText">
-                    Select a strategy track for your 5 year journey.
-                </p>
-            </article>
-            <article className="ctaCard greenCard">
-                <h1 className="ctaTitle">Run Simulations</h1>
-                <p className="ctaText">
-                    Test financial decisions with interactive scenarios.
-                </p>
-            </article>
-            <article className="ctaCard orangeCard">
-                <h1 className="ctaTitle">Track Milestones</h1>
-                <p className="ctaText">
-                    View your progress map and achievements.
-                </p>            
-            </article>
+        <CTACard
+        title="Strategy Track"
+        text="Select a strategy track for your 5 year journey."
+        className="blueCard"
+        />
+        <CTACard
+        title="Run Simulations"
+        text="Test financial decisions with interactive scenarios."
+        className="greenCard"
+        />
+        <CTACard
+        title="Track Milestones"
+        text="View your progress map and achievements."
+        className="orangeCard"
+        />
         </section>
     </main>
 );

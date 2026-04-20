@@ -1,27 +1,27 @@
-.moneySnapshot {
+.strategyTrack {
     margin-top: 3rem;
     padding: 2rem;
 }
 
-.snapshotTitle {
+.strategyTrackTitle {
     font-size: 2.5rem;
     font-weight: bold;
     text-align: left;
 }
 
-.snapshotSubtitle {
+.strategyTrackSubtitle {
     font-size: 1.2rem;
     text-align: left; 
     margin-top: 0rem;
 }
 
-.financialStoryContainer {
+.chooseJourney {
     background-color: rgba(230, 157, 157, 0.466);
     border-radius: 10px;
     border-left: 4px red solid;
 }
 
-.storyTitle {
+.chooseJourneyTitle {
     font-size: 1.5rem;
     text-align: left;
     padding-left: 1rem;
@@ -29,7 +29,7 @@
     margin-bottom: 0;
 }
 
-.storyText {
+.chooseJourneyText {
     font-size: 0.95rem;
     text-align: left;
     padding-left: 1rem;
@@ -39,19 +39,13 @@
     list-style: none;
 }
 
-.moneySnapshotCardContainer {
+.trackCardContainer {
     display: flex;
     gap: 1rem;
     margin-top: 2rem;
 }
 
-.moneySnapshotGraphs {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-.savingsAndDebtContainer {
+.trackComparisonContainer {
     display: flex;
     gap: 1rem;
     margin-top: 2rem;

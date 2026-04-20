@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer'
 //PAGE IMPORTS
 import LandingPage from './pages/LandingPage/LandingPage'
 import MoneySnapshot from './pages/MoneySnapshot/MoneySnapshot'
+import StrategyTrack from './pages/StrategyTrackPage/StrategyTrack'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/moneySnapshot" element={<MoneySnapshot />} />
+      <Route path="/strategyTrack" element={<StrategyTrack />} />
     </Routes>
     <Footer />
     </BrowserRouter>
