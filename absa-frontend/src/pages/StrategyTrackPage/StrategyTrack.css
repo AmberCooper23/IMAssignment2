@@ -57,6 +57,7 @@
 
 .blueStratCard li {
     background-color: white;
+    list-style: decimal;
 }
 .blueStratCard li::marker {
 color: #0896a5;
@@ -68,6 +69,7 @@ color: #0896a5;
 
 .greenStratCard li {
     background-color: white;
+    list-style: decimal;
 }
 
 .greenStratCard li::marker {
@@ -80,6 +82,7 @@ color: #22972a;
 
 .orangeStratCard li {
     background-color: white;
+    list-style: decimal;
 }
 
 .orangeStratCard li::marker {
