@@ -1,6 +1,5 @@
 import React from "react";
 import "./SimulationLab.css";
-// import "./test.css";
 
 function SimulationLab() {
     return (
