@@ -41,8 +41,10 @@
 
 .trackCardContainer {
     display: flex;
-    gap: 1rem;
+    gap: 2.5rem;
     margin-top: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 .trackComparisonContainer {
