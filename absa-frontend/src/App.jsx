@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer'
 import LandingPage from './pages/LandingPage/LandingPage'
 import MoneySnapshot from './pages/MoneySnapshot/MoneySnapshot'
 import StrategyTrack from './pages/StrategyTrackPage/StrategyTrack'
+import SimulationLab from './pages/SimulationLab/SimulationLab'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <Route path="/" element={<LandingPage />} />
       <Route path="/moneySnapshot" element={<MoneySnapshot />} />
       <Route path="/strategyTrack" element={<StrategyTrack />} />
+      <Route path="/simulationLab" element={<SimulationLab/>} />
     </Routes>
     <Footer />
     </BrowserRouter>
