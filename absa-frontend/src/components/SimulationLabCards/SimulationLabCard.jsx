@@ -1,10 +1,12 @@
 import React from "react";
+import "./SimulationLabCard.css";
 
 function SimulationLabCard({title, category, description}){
     return (
         <article className="simulationLabCard">
             <header className="simulationLabCardHeader">
-            <h2 className="simulationLabCardTitle">{title}</h2>            
+            <h2 className="simulationLabCardTitle">{title}</h2>
+            <p className="simulationLabCardCategory">{category}</p>            
             </header>
             <p className="simulationLabCardText">{description}</p>
         </article>

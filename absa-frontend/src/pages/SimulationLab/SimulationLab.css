@@ -19,6 +19,7 @@
     background-color: rgba(230, 157, 157, 0.466);
     border-radius: 10px;
     border-left: 4px red solid;
+    margin-top: 1rem;
 }
 
 .overviewCardTitle {
@@ -37,6 +38,14 @@
     color: rgb(59, 59, 59);
     white-space: pre-line;
     list-style: none;
+}
+
+.simulationLabCardContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    margin-top: 1rem;
 }
 
 .insightsTitle {
