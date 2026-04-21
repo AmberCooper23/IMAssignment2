@@ -68,14 +68,17 @@ function SimulationLab() {
                     <InsightCard 
                     title="Property vs Rent"
                     description="In JHB buying costs ~R200k more upfront but builds R300k equity. Renting saves R500k liquid."
+                    className="blueCard"
                     />
                     <InsightCard
                     title="Car Finance Impact"
                     description="A R6.5k/month car costs R600k in lost investment growth over 5 years at 10% returns."
+                    className="greenCard"
                     />
                     <InsightCard
                     title="Offshore Diversification"
                     description="A 30% offshore allocation could add R80k to your portfolio if Rand weakens 15% over 5 years."
+                    className="orangeCard"
                     />
                 </section>
             </section>

@@ -1,0 +1,15 @@
+.insightCard {
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.insightCardTitle {
+    font-size: 1.1rem;
+    margin-bottom: 0rem;
+}
+
+.insightCardText {
+    font-size: 0.9rem;
+}
+
