@@ -29,6 +29,12 @@
     margin-bottom: 0;
 }
 
+.insightsTitle {
+    font-size: 1.5rem;
+    text-align: left;
+    color: blue;
+}
+
 .overviewCardText {
     font-size: 0.95rem;
     text-align: left;
@@ -37,11 +43,6 @@
     color: rgb(59, 59, 59);
     white-space: pre-line;
     list-style: none;
-}
-
-.insightsTitle {
-    font-size: 1.5rem;
-    text-align: left;
 }
 
 .blueSimCard {

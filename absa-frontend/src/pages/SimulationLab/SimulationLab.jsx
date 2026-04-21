@@ -1,5 +1,6 @@
 import React from "react";
-import './simulationLab.css';
+import "./SimulationLab.css";
+// import "./test.css";
 
 function SimulationLab() {
     return (
@@ -15,9 +16,9 @@ function SimulationLab() {
 
             <section className="overviewCard">
                 <h2 className="overviewCardTitle">
-                    Experiment with Confidence
+                    Experiment with Confidence!
                 </h2>
-                <p className="overviewText">
+                <p className="overviewCardText">
                     Each simulation uses South African financial context - SARS rates, property markets, JSE vs offshore returns - to give you realistic forecasts. Play with the inputs to see how different choices impact your journey.
                 </p>
             </section>
