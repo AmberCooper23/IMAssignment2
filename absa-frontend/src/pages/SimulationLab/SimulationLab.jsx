@@ -1,5 +1,6 @@
 import React from "react";
 import "./SimulationLab.css";
+import SimulationLabCard from "../../components/SimulationLabCards/SimulationLabCard";
 
 function SimulationLab() {
     return (
@@ -25,8 +26,37 @@ function SimulationLab() {
                 {/* Simulation Lab Filters */}
             </section>
 
-            <section className="simulationLabCards">
-                {/* Simulation Cards */}
+            <section className="simulationLabCardContainer">
+                <SimulationLabCard
+                title="Property vs Renting"
+                category="Property"
+                description="Compare buying property vs renting in JHB or CPT over 5 years"
+                />
+                <SimulationLabCard
+                title="Luxury Car vs Invest"
+                category="Lifestyle"
+                description="See the opportunity cost of luxury car finance vs investing the difference"
+                />
+                <SimulationLabCard
+                title="Local vs Offshore"
+                category="Investments"
+                description="Compare local JSE investments vs offshore USD/EUR allocation"
+                />
+                <SimulationLabCard
+                title="RA Tax Benefits"
+                category="Tax"
+                description="Calculate how RA contributions reduce your SARS tax burden"
+                />
+                <SimulationLabCard
+                title="Emergency Fund Builder"
+                category="Savings"
+                description="Determine your idea emergency fund size for your lifestyle"
+                />
+                <SimulationLabCard
+                title="Debt Payoff Strategy"
+                category="Debt"
+                description="Optimise student loan vs car finance repayment strategy"
+                />
             </section>
 
             <section className="insights">
