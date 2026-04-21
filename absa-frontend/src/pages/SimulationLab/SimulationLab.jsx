@@ -1,5 +1,6 @@
 import React from "react";
 import "./SimulationLab.css";
+import InsightCard from "../../components/InsightCard/InsightCard";
 import SimulationLabCard from "../../components/SimulationLabCards/SimulationLabCard";
 
 function SimulationLab() {
@@ -63,8 +64,19 @@ function SimulationLab() {
                 <h1 className="insightsTitle">
                     Quick Insights from the Lab
                 </h1>
-                <section className="insightCards">
-                    {/* Insight Cards */}
+                <section className="insightCardContainer">
+                    <InsightCard 
+                    title="Property vs Rent"
+                    description="In JHB buying costs ~R200k more upfront but builds R300k equity. Renting saves R500k liquid."
+                    />
+                    <InsightCard
+                    title="Car Finance Impact"
+                    description="A R6.5k/month car costs R600k in lost investment growth over 5 years at 10% returns."
+                    />
+                    <InsightCard
+                    title="Offshore Diversification"
+                    description="A 30% offshore allocation could add R80k to your portfolio if Rand weakens 15% over 5 years."
+                    />
                 </section>
             </section>
         </main>
