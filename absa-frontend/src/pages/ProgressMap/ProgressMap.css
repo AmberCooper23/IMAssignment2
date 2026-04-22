@@ -1,0 +1,90 @@
+.progressMap {
+    margin-top: 3rem;
+    padding: 2rem;
+}
+
+.progressMapHeader {
+  margin-bottom: 1.5rem;
+}
+
+.progressMapTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.snapshotSubtitle {
+    font-size: 1.2rem;
+    text-align: left; 
+    margin-top: 0rem;
+}
+
+.progressBanner {
+  background: linear-gradient(90deg, #e74c3c, #f39c12);
+  border-radius: 10px;
+  padding: 1.5rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.progressBannerHeader{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.progressBannerTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem;
+  color: white;
+  text-align: left;
+}
+
+.progressBannerText {
+  font-size: 0.95rem;
+  margin: 0 0 0.5rem;
+  opacity: 0.9;
+  text-align: left;
+}
+
+.progressBannerCount {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.progressBannerLabel {
+  font-size: 0.9rem;
+  font-weight: 400;
+  opacity: 0.9;
+  margin-top: 0.5rem;
+}
+
+
+.progressBar {
+  width: 100%;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  appearance: none;
+}
+
+.progressBar::-webkit-progress-bar {
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 10px;
+}
+
+.progressBar::-webkit-progress-value {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.progressBar::-moz-progress-bar {
+  background-color: #fff;
+  border-radius: 10px;
+}

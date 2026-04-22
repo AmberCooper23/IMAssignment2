@@ -9,6 +9,7 @@ import LandingPage from './pages/LandingPage/LandingPage'
 import MoneySnapshot from './pages/MoneySnapshot/MoneySnapshot'
 import StrategyTrack from './pages/StrategyTrackPage/StrategyTrack'
 import SimulationLab from './pages/SimulationLab/SimulationLab'
+import ProgressMap from './pages/ProgressMap/ProgressMap'
 
 //CONTEXT IMPORTS
 import { FinanceProvider } from './context/FinanceContext';
@@ -26,6 +27,7 @@ function App() {
       <Route path="/moneySnapshot" element={<MoneySnapshot />} />
       <Route path="/strategyTrack" element={<StrategyTrack />} />
       <Route path="/simulationLab" element={<SimulationLab/>} />
+      <Route path="/progressMap" element={<ProgressMap/>}/>
     </Routes>
     <Footer />
     </BrowserRouter>
