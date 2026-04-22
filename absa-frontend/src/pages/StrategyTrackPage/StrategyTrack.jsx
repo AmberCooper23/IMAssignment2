@@ -1,6 +1,8 @@
 import React from "react";
 import CTACard from "../../components/ctaCard/ctaCard";
 import StrategyTrackCard from "../../components/StrategyTrackCard/StrategyTrackCard";
+import ComparisonTable from "../../components/ComparisonTable/ComparisonTable";
+
 import "./StrategyTrack.css";
 
 function StrategyTrack() {
@@ -77,7 +79,7 @@ function StrategyTrack() {
         </section>
 
         <section className="trackComparisonContainer">
-            {/* Comparison Table */}
+            <ComparisonTable/>
         </section>
 
         <section className="ctaCardContainer">
