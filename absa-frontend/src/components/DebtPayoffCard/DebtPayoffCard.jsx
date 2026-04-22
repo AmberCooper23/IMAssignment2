@@ -11,35 +11,50 @@ function DebtPayoffCard() {
     carLoan,
     carLoanOriginal,
     carLoanPayment,
+    homeLoan,
+    homeLoanOriginal,
+    homeLoanPayment,
     takeHome
   } = useContext(FinanceContext);
 
   const { goalDebtFreeYear, yearsUntilDebtFree } = useContext(GoalsContext);
 
   const debts = [
-    {
-      title: "Student Loan (NSFAS)",
-      current: studentLoan,
-      original: studentLoanOriginal,
-      progress:
-        studentLoanOriginal > 0
-          ? ((studentLoanOriginal - studentLoan) / studentLoanOriginal) * 100
-          : 0,
-      color: "#e74c3c",
-      note: `Remaining balance R${studentLoan}, Monthly payment R${studentLoanPayment}`
-    },
-    {
-      title: "Car Finance",
-      current: carLoan,
-      original: carLoanOriginal,
-      progress:
-        carLoanOriginal > 0
-          ? ((carLoanOriginal - carLoan) / carLoanOriginal) * 100
-          : 0,
-      color: "#f39c12",
-      note: `Remaining balance R${carLoan}, Monthly payment R${carLoanPayment}`
-    }
-  ];
+  {
+    title: "Student Loan",
+    current: studentLoan,
+    original: studentLoanOriginal,
+    progress:
+      studentLoanOriginal > 0
+        ? ((studentLoanOriginal - studentLoan) / studentLoanOriginal) * 100
+        : 0,
+    color: "#e74c3c",
+    note: `Remaining balance R${studentLoan}, Monthly payment R${studentLoanPayment}`
+  },
+  {
+    title: "Car Finance",
+    current: carLoan,
+    original: carLoanOriginal,
+    progress:
+      carLoanOriginal > 0
+        ? ((carLoanOriginal - carLoan) / carLoanOriginal) * 100
+        : 0,
+    color: "#f39c12",
+    note: `Remaining balance R${carLoan}, Monthly payment R${carLoanPayment}`
+  },
+  {
+    title: "Home Loan",
+    current: homeLoan,
+    original: homeLoanOriginal,
+    progress:
+      homeLoanOriginal > 0
+        ? ((homeLoanOriginal - homeLoan) / homeLoanOriginal) * 100
+        : 0,
+    color: "#3498db",
+    note: `Remaining balance R${homeLoan}, Monthly payment R${homeLoanPayment}`
+  }
+];
+
 
   const lifestyleAlert =
     carLoanPayment > 0 && takeHome > 0
@@ -53,7 +68,7 @@ function DebtPayoffCard() {
         <article key={index} className="debtItem">
           <header>
             <h3>{debt.title}</h3>
-            <p><strong>R{debt.current}</strong></p>
+            <p><strong>{debt.current === 0 ? "Debt Free" : `R${debt.current}`}</strong></p>
           </header>
           <progress
             value={debt.progress}
@@ -62,7 +77,9 @@ function DebtPayoffCard() {
           >
             {debt.progress}%
           </progress>
-          <p className="note">{debt.note}</p>
+          <p className="note">{debt.current === 0
+        ? "Congratulations, this debt is fully paid off!"
+        : debt.note}</p>
         </article>
       ))}
       {lifestyleAlert && lifestyleAlert > 20 && (

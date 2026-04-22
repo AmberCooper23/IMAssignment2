@@ -3,13 +3,14 @@ import React, { createContext, useState } from "react";
 const GoalsContext = createContext();
 
 function GoalsProvider({ children }) {
-  // GOALS
-    const [goalEmergencyFund, setGoalEmergencyFund] = useState(0);
-  const [goalSavingsRate, setGoalSavingsRate] = useState(0);
-  const [goalInvestments, setGoalInvestments] = useState(0);
-  const [goalTfsaAnnual, setGoalTfsaAnnual] = useState(0);
-  const [goalTfsaLifetime, setGoalTfsaLifetime] = useState(0);
-  const [goalDebtFreeYear, setGoalDebtFreeYear] = useState(0);
+// GOALS
+const [goalEmergencyFund, setGoalEmergencyFund] = useState(210000);
+const [goalSavingsRate, setGoalSavingsRate] = useState(30);         
+const [goalInvestments, setGoalInvestments] = useState(150000);     
+const [goalTfsaAnnual, setGoalTfsaAnnual] = useState(46000);        
+const [goalTfsaLifetime, setGoalTfsaLifetime] = useState(500000);   
+const [goalDebtFreeYear, setGoalDebtFreeYear] = useState(2032);     
+
 
   // DERIVED VALUES
   const currentYear = new Date().getFullYear();

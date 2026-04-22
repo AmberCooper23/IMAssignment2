@@ -5,37 +5,35 @@ const FinanceContext = createContext();
 function FinanceProvider({children}) {
 
     // Income & deductions
-        const [income, setIncome] = useState(10);
-        const [tax, setTax] = useState(10);
-        const [ra, setRa] = useState(10);
-        const [medicalAid, setMedicalAid] = useState(10);
+        const [income, setIncome] = useState(70000); 
+        const [tax, setTax] = useState(19357); 
+        const [ra, setRa] = useState(11000); 
+        const [medicalAid, setMedicalAid] = useState(9000); 
 
     // Savings & Investments
-        const [savingsRate, setSavingsRate] = useState(0);
-        const [emergencyFund, setEmergencyFund] = useState(20);
-        const [tfsa, setTfsa] = useState(0);
-        const [investments, setInvestments] = useState(0);
+        const [savingsRate, setSavingsRate] = useState(25); 
+        const [emergencyFund, setEmergencyFund] = useState(150000); 
+        const [tfsa, setTfsa] = useState(36000); 
+        const [investments, setInvestments] = useState(50000); 
 
     // Debt
-        const [studentLoan, setStudentLoan] = useState(0);
-        const [studentLoanOriginal] = useState(0);
-        const [studentLoanPayment, setStudentLoanPayment] = useState(0);
+        const [studentLoan, setStudentLoan] = useState(0); 
+        const [studentLoanOriginal] = useState(150000); 
+        const [studentLoanPayment, setStudentLoanPayment] = useState(0); 
 
-        const [homeLoan, setHomeLoan] = useState(0);
-        const [homeLoanOriginal] = useState(0);
-        const [homeLoanPayment, setHomeLoanPayment] = useState(0);
+        const [homeLoan, setHomeLoan] = useState(1200000); 
+        const [homeLoanOriginal] = useState(1500000); 
+        const [homeLoanPayment, setHomeLoanPayment] = useState(16000); 
 
-        const [personalLoan, setPersonalLoan] = useState(0);
-        const [personalLoanOriginal] = useState(0);
-        const [personalLoanPayment, setPersonalLoanPayment] = useState(0);
+        const [carLoan, setCarLoan] = useState(12000); 
+        const [carLoanOriginal] = useState(24000); 
+        const [carLoanPayment, setCarLoanPayment] = useState(2200); 
 
-        const [carLoan, setCarLoan] = useState(0);
-        const [carLoanOriginal] = useState(0);
-        const [carLoanPayment, setCarLoanPayment] = useState(0);
+
 
     // Derived values
         const takeHome = income - tax - ra - medicalAid;
-        const totalDebt = studentLoan + homeLoan + personalLoan + carLoan;
+        const totalDebt = studentLoan + homeLoan + carLoan;
         const deductions = tax + ra + medicalAid;
         const totalSavings = emergencyFund + tfsa + investments;
 
@@ -56,9 +54,6 @@ function FinanceProvider({children}) {
                 homeLoan, setHomeLoan,
                 homeLoanOriginal, 
                 homeLoanPayment, setHomeLoanPayment,
-                personalLoan, setPersonalLoan,
-                personalLoanOriginal,
-                personalLoanPayment, setPersonalLoanPayment,
                 carLoan, setCarLoan,
                 carLoanOriginal,
                 carLoanPayment, setCarLoanPayment,
