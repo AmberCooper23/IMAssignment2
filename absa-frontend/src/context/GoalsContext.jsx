@@ -4,7 +4,7 @@ const GoalsContext = createContext();
 
 function GoalsProvider({ children }) {
   // GOALS
-  const [goalEmergencyFund, setGoalEmergencyFund] = useState(0);
+    const [goalEmergencyFund, setGoalEmergencyFund] = useState(0);
   const [goalSavingsRate, setGoalSavingsRate] = useState(0);
   const [goalInvestments, setGoalInvestments] = useState(0);
   const [goalTfsaAnnual, setGoalTfsaAnnual] = useState(0);
@@ -14,22 +14,22 @@ function GoalsProvider({ children }) {
   // DERIVED VALUES
   const currentYear = new Date().getFullYear();
   const yearsUntilDebtFree =
-    goalDebtFreeYear > currentYear ? goalDebtFreeYear - currentYear : 0;
+    goalDebtFreeYear > currentYear ? goalDebtFreeYear - currentYear : null;
 
   const tfsaAnnualProgress = (currentTfsa) =>
-    goalTfsaAnnual > 0 ? (currentTfsa / goalTfsaAnnual) * 100 : 0;
+    goalTfsaAnnual > 0 ? (currentTfsa / goalTfsaAnnual) * 100 : null;
 
   const tfsaLifetimeProgress = (currentTfsa) =>
-    goalTfsaLifetime > 0 ? (currentTfsa / goalTfsaLifetime) * 100 : 0;
+    goalTfsaLifetime > 0 ? (currentTfsa / goalTfsaLifetime) * 100 : null;
 
   const emergencyFundProgress = (currentEmergencyFund) =>
-    goalEmergencyFund > 0 ? (currentEmergencyFund / goalEmergencyFund) * 100 : 0;
+    goalEmergencyFund > 0 ? (currentEmergencyFund / goalEmergencyFund) * 100 : null;
 
   const investmentsProgress = (currentInvestments) =>
-    goalInvestments > 0 ? (currentInvestments / goalInvestments) * 100 : 0;
+    goalInvestments > 0 ? (currentInvestments / goalInvestments) * 100 : null;
 
   const savingsRateGap = (currentSavingsRate) =>
-    goalSavingsRate > 0 ? goalSavingsRate - currentSavingsRate : 0;
+    goalSavingsRate > 0 ? goalSavingsRate - currentSavingsRate : null;
 
   return (
     <GoalsContext.Provider
