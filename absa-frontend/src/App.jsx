@@ -12,11 +12,13 @@ import SimulationLab from './pages/SimulationLab/SimulationLab'
 
 //CONTEXT IMPORTS
 import { FinanceProvider } from './context/FinanceContext';
+import { GoalsProvider } from './context/GoalsContext'
 
 function App() {
 
   return (
     <FinanceProvider>
+      <GoalsProvider>
       <BrowserRouter>
     <NavBar />
     <Routes>
@@ -27,6 +29,8 @@ function App() {
     </Routes>
     <Footer />
     </BrowserRouter>
+      </GoalsProvider>
+      
     </FinanceProvider>
     
   )
