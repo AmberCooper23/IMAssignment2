@@ -6,6 +6,7 @@ import CTACard from "../../components/ctaCard/ctaCard";
 import FinanceContext from "../../context/FinanceContext";
 import IncomeChart from "../../components/IncomeChart/IncomeChart";
 import ExpenseChart from "../../components/ExpenseChart/ExpenseChart";
+import TaxBenefitsSummary from "../../components/SouthAfricanTaxCard/SouthAfricanTaxCard";
 
 function MoneySnapshot() {
     const {income, takeHome, savingsRate, totalDebt} = useContext(FinanceContext);
@@ -68,7 +69,13 @@ return (
             </article>
         </section>
         <section className="southAfricanTaxCard">
-            {/* <SouthAfricanTaxCard/> */}
+            <article className="southAfricanTaxCardContainer">
+                <h2 className="southAfricanTaxCardHeader">
+                South African Tax & Benefits
+                </h2>
+            <TaxBenefitsSummary/>
+            </article>
+            
         </section>
         <section className="savingsAndDebtContainer">
             {/* <SavingsProgressCard/> */}
