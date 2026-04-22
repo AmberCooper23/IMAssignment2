@@ -1,0 +1,92 @@
+.comparisonTableCard {
+    gap: 1rem;
+    margin-top: 2rem;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding-left: 0rem;
+    padding-right: 0rem;
+}
+
+.comparisonTable {
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.comparisonTableTitle {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+    padding-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.comparisonTableHeadRow {
+    border-top: 1px solid rgba(128, 128, 128, 0.022);
+    background-color: rgba(142, 142, 142, 0.07);
+    font-size: 0.9rem;
+    height: 2.5rem;
+}
+
+.comparisonTableHeadCell {
+    color: black;
+    padding-left: 1rem;
+}
+
+.comparisonTableRow td {
+    height: 3rem;
+}
+
+.comparisonTableTrack {
+    padding-left: 1rem;
+    font-weight: bold;
+    color: black;
+    font-size: 1rem;
+}
+
+.comparisonTableCell {
+    padding-left: 1rem;
+    font-size: 0.9rem;
+}
+
+.comparisonTableRiskLevel {
+    padding-left: 1rem;
+    font-size: 0.9rem;
+}
+
+.riskLow {
+    background-color: rgba(38, 168, 38, 0.333);
+    color: rgb(29, 123, 29);
+    font-weight: bold;
+    border-radius: 10px;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+
+.riskMedium {
+    background-color: rgba(168, 116, 38, 0.333);
+    color: rgb(145, 101, 34);
+    font-weight: bold;
+    border-radius: 10px;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+
+.riskHigh {
+    background-color: rgba(193, 62, 48, 0.333);
+    color: rgb(144, 38, 26);
+    font-weight: bold;
+    border-radius: 10px;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+
+.comparisonTableGoal {
+    padding-left: 1rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: black;
+}

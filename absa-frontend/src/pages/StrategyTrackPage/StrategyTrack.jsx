@@ -79,6 +79,7 @@ function StrategyTrack() {
         </section>
 
         <section className="trackComparisonContainer">
+            
             <ComparisonTable/>
         </section>
 
