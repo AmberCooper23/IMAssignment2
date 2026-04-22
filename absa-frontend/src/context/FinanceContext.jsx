@@ -5,7 +5,7 @@ const FinanceContext = createContext();
 function FinanceProvider({children}) {
 
     // Income & deductions
-        const [income, setIncome] = useState(0);
+        const [income, setIncome] = useState(10);
         const [tax, setTax] = useState(0);
         const [ra, setRa] = useState(0);
         const [medicalAid, setMedicalAid] = useState(0);
