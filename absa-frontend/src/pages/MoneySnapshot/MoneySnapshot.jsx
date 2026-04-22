@@ -8,6 +8,7 @@ import IncomeChart from "../../components/IncomeChart/IncomeChart";
 import ExpenseChart from "../../components/ExpenseChart/ExpenseChart";
 import TaxBenefitsSummary from "../../components/SouthAfricanTaxCard/SouthAfricanTaxCard";
 import SavingProgressCard from "../../components/SavingProgressCard/SavingProgressCard";
+import DebtPayoffCard from "../../components/DebtPayoffCard/DebtPayoffCard";
 
 function MoneySnapshot() {
     const {income, takeHome, savingsRate, totalDebt} = useContext(FinanceContext);
@@ -80,7 +81,7 @@ return (
         </section>
         <section className="savingsAndDebtContainer">
             <SavingProgressCard/>
-            {/* <DebtPayoffCard/> */}
+            <DebtPayoffCard/>
         </section>
         <section className="RecentAchievementsContainer">
             {/* <RecentAchievements/> */}

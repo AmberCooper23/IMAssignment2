@@ -18,9 +18,20 @@ function FinanceProvider({children}) {
 
     // Debt
         const [studentLoan, setStudentLoan] = useState(0);
+        const [studentLoanOriginal] = useState(0);
+        const [studentLoanPayment, setStudentLoanPayment] = useState(0);
+
         const [homeLoan, setHomeLoan] = useState(0);
+        const [homeLoanOriginal] = useState(0);
+        const [homeLoanPayment, setHomeLoanPayment] = useState(0);
+
         const [personalLoan, setPersonalLoan] = useState(0);
+        const [personalLoanOriginal] = useState(0);
+        const [personalLoanPayment, setPersonalLoanPayment] = useState(0);
+
         const [carLoan, setCarLoan] = useState(0);
+        const [carLoanOriginal] = useState(0);
+        const [carLoanPayment, setCarLoanPayment] = useState(0);
 
     // Derived values
         const takeHome = income - tax - ra - medicalAid;
@@ -40,9 +51,17 @@ function FinanceProvider({children}) {
                 tfsa, setTfsa,
                 investments, setInvestments,
                 studentLoan, setStudentLoan,
+                studentLoanOriginal,
+                studentLoanPayment, setStudentLoanPayment,
                 homeLoan, setHomeLoan,
+                homeLoanOriginal, 
+                homeLoanPayment, setHomeLoanPayment,
                 personalLoan, setPersonalLoan,
+                personalLoanOriginal,
+                personalLoanPayment, setPersonalLoanPayment,
                 carLoan, setCarLoan,
+                carLoanOriginal,
+                carLoanPayment, setCarLoanPayment,
                 takeHome,
                 totalDebt,
                 deductions,

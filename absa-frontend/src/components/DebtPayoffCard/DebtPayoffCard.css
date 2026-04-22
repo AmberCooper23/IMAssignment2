@@ -1,5 +1,5 @@
-.savingsProgressWrapper {
-  flex: 1; 
+.debtPayoffWrapper {
+  flex: 1;
   background: #fff;
   border-radius: 10px;
   padding: 1.5rem;
@@ -8,14 +8,14 @@
   flex-direction: column;
 }
 
-.savingsProgressWrapper h2 {
+.debtPayoffWrapper h2 {
   margin-bottom: 1.5rem;
   font-size: 1.3rem;
   font-weight: 600;
   color: #333;
 }
 
-.savingsProgressTitle {
+.debtPayoffTitle {
     font-size: 1.5rem;
     text-align: left;
     margin-bottom: 0;
@@ -23,24 +23,24 @@
     color: black;
 }
 
-.savingsItem {
+.debtItem {
   margin-bottom: 1.5rem;
 }
 
-.savingsItem header {
+.debtItem header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: 0.5rem;
 }
 
-.savingsItem h3 {
+.debtItem h3 {
   font-size: 1rem;
   margin: 0;
   color: #444;
 }
 
-.savingsItem p {
+.debtItem p {
   margin: 0;
   color: #222;
 }
@@ -54,8 +54,7 @@ progress {
 }
 
 progress::-webkit-progress-bar {
-  background-color: #fff; 
-  border: 1px solid #ddd;
+  background-color: #f0f0f0;
   border-radius: 9px;
 }
 
@@ -67,9 +66,24 @@ progress::-moz-progress-bar {
   border-radius: 9px;
 }
 
-
 .note {
   font-size: 0.85rem;
   color: #666;
   margin-top: 0.4rem;
+}
+
+.alertBox {
+  background: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #856404;
+}
+
+.debtFreeNote {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #333;
 }
