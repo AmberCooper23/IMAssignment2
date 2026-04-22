@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
+import { PieChart, Pie, Cell, Legend } from "recharts";
 import FinanceContext from "../../context/FinanceContext";
 import "./ExpenseChart.css";
 
@@ -40,7 +40,6 @@ function ExpenseBreakdownDonut() {
               <Cell key={index} fill={entry.color} />
             ))}
           </Pie>
-          <Tooltip />
           <Legend layout="horizontal" align="center" verticalAlign="bottom" />
         </PieChart>
         <ul className="percentList">
