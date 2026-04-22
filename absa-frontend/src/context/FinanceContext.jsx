@@ -6,13 +6,13 @@ function FinanceProvider({children}) {
 
     // Income & deductions
         const [income, setIncome] = useState(10);
-        const [tax, setTax] = useState(0);
-        const [ra, setRa] = useState(0);
+        const [tax, setTax] = useState(10);
+        const [ra, setRa] = useState(10);
         const [medicalAid, setMedicalAid] = useState(0);
 
     // Savings & Investments
         const [savingsRate, setSavingsRate] = useState(0);
-        const [emergencyFund, setEmergencyFund] = useState(0);
+        const [emergencyFund, setEmergencyFund] = useState(20);
         const [tfsa, setTfsa] = useState(0);
         const [investments, setInvestments] = useState(0);
 
@@ -24,7 +24,9 @@ function FinanceProvider({children}) {
 
     // Derived values
         const takeHome = income - tax - ra - medicalAid;
-        const totalDebt = studentLoan + homeLoan + personalLoan + carLoan
+        const totalDebt = studentLoan + homeLoan + personalLoan + carLoan;
+        const deductions = tax + ra + medicalAid;
+        const totalSavings = emergencyFund + tfsa + investments;
 
         return (
             <FinanceContext.Provider
@@ -42,7 +44,9 @@ function FinanceProvider({children}) {
                 personalLoan, setPersonalLoan,
                 carLoan, setCarLoan,
                 takeHome,
-                totalDebt
+                totalDebt,
+                deductions,
+                totalSavings
             }}
             >
                 {children}
