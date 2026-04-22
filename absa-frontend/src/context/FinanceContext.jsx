@@ -8,7 +8,7 @@ function FinanceProvider({children}) {
         const [income, setIncome] = useState(10);
         const [tax, setTax] = useState(10);
         const [ra, setRa] = useState(10);
-        const [medicalAid, setMedicalAid] = useState(0);
+        const [medicalAid, setMedicalAid] = useState(100);
 
     // Savings & Investments
         const [savingsRate, setSavingsRate] = useState(0);

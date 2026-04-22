@@ -1,0 +1,16 @@
+.chartWithStats {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.expenseDonut {
+flex: 1;}
+
+.percentList {
+  list-style: none;
+  padding: 0;
+  margin-left: 2.5rem;  /* space between chart and list */
+  font-weight: bold;
+  flex: 1;
+}
