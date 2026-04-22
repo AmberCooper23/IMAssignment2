@@ -10,10 +10,14 @@ import MoneySnapshot from './pages/MoneySnapshot/MoneySnapshot'
 import StrategyTrack from './pages/StrategyTrackPage/StrategyTrack'
 import SimulationLab from './pages/SimulationLab/SimulationLab'
 
+//CONTEXT IMPORTS
+import { FinanceProvider } from './context/FinanceContext';
+
 function App() {
 
   return (
-    <BrowserRouter>
+    <FinanceProvider>
+      <BrowserRouter>
     <NavBar />
     <Routes>
       <Route path="/" element={<LandingPage />} />
@@ -23,6 +27,8 @@ function App() {
     </Routes>
     <Footer />
     </BrowserRouter>
+    </FinanceProvider>
+    
   )
 }
 

@@ -1,10 +1,12 @@
-import React from "react";
+import React, {useContext} from "react";
 import "./MoneySnapshot.css";
 
 import MoneySnapshotCard from "../../components/MoneySnapshotCard/MoneySnapshotCard";
 import CTACard from "../../components/ctaCard/ctaCard";
+import FinanceContext from "../../context/FinanceContext";
 
 function MoneySnapshot() {
+    const {income, takeHome, savingsRate, totalDebt} = useContext(FinanceContext);
 return (
     <main className="moneySnapshot">
         <header className="snapshotHeader">
@@ -26,25 +28,25 @@ return (
 
             <MoneySnapshotCard 
             title="Monthly Income"
-            number="R45, 000"
+            number={`R${income}`}
             subtitle="Before deductions"
             />
 
             <MoneySnapshotCard
             title="Take Home"
-            number="R30, 500"
+            number={`R${takeHome}`}
             subtitle="After tax & deductions"
             />
 
             <MoneySnapshotCard
             title="Savings Rate"
-            number="19.7%"
+            number={`${savingsRate}%`}
             subtitle="Of take-home pay"
             />
 
             <MoneySnapshotCard
             title="Total Debt"
-            number="365k"
+            number={`R${totalDebt}`}
             subtitle="Student + Car finance"
             />
 

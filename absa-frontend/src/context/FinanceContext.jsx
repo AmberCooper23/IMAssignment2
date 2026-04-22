@@ -27,7 +27,7 @@ function FinanceProvider({children}) {
         const totalDebt = studentLoan + homeLoan + personalLoan + carLoan
 
         return (
-            <FinanceProvider
+            <FinanceContext.Provider
             value={{
                 income, setIncome,
                 tax, setTax,
@@ -46,9 +46,9 @@ function FinanceProvider({children}) {
             }}
             >
                 {children}
-            </FinanceProvider>
+            </FinanceContext.Provider>
         );
 }
 
 export default FinanceContext;
-export default {FinanceProvider};
+export {FinanceProvider};
