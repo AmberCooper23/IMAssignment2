@@ -2,6 +2,7 @@ import React, {useContext} from "react";
 import FinanceContext from "../../context/FinanceContext";
 import GoalsContext from "../../context/GoalsContext";
 import "./ProgressMap.css";
+import AchievementGallery from "../../components/AchievementGallery/AchievementGallery";
 
 function ProgressMap() {
         const {emergencyFund, tfsa, investments, studentLoan, carLoan, homeLoan, personalLoan} = useContext(FinanceContext);
@@ -26,12 +27,12 @@ function ProgressMap() {
     {
       title: "Debt Defeater",
       description: "Pay off 25% of your total debt",
-      unlocked: false
+      unlocked: true,
     },
     {
       title: "Offshore Pioneer",
       description: "Allocate 10% of portfolio to offshore investments",
-      unlocked: false
+      unlocked: true,
     },
     {
       title: "Emergency Fund Master",
@@ -67,7 +68,9 @@ function ProgressMap() {
         {progress}%
       </progress>
         </section>
-        
+        <section className="achievements">
+          <AchievementGallery/>
+        </section>
     </main> 
     );   
 }

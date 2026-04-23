@@ -15,6 +15,7 @@ function FinanceProvider({children}) {
         const [emergencyFund, setEmergencyFund] = useState(150000); 
         const [tfsa, setTfsa] = useState(36000); 
         const [investments, setInvestments] = useState(50000); 
+        const [offshoreInvestments, setOffshoreInvestments] = useState(5000);
 
     // Debt
         const [studentLoan, setStudentLoan] = useState(0); 
@@ -36,6 +37,7 @@ function FinanceProvider({children}) {
         const totalDebt = studentLoan + homeLoan + carLoan;
         const deductions = tax + ra + medicalAid;
         const totalSavings = emergencyFund + tfsa + investments;
+        const offshorePercent = investments > 0 ? (offshoreInvestments / investments) * 100 : 0;
 
         return (
             <FinanceContext.Provider
@@ -48,6 +50,7 @@ function FinanceProvider({children}) {
                 emergencyFund, setEmergencyFund,
                 tfsa, setTfsa,
                 investments, setInvestments,
+                offshoreInvestments, setOffshoreInvestments,
                 studentLoan, setStudentLoan,
                 studentLoanOriginal,
                 studentLoanPayment, setStudentLoanPayment,
@@ -60,7 +63,8 @@ function FinanceProvider({children}) {
                 takeHome,
                 totalDebt,
                 deductions,
-                totalSavings
+                totalSavings,
+                offshorePercent
             }}
             >
                 {children}
