@@ -3,6 +3,7 @@ import FinanceContext from "../../context/FinanceContext";
 import GoalsContext from "../../context/GoalsContext";
 import "./ProgressMap.css";
 import AchievementGallery from "../../components/AchievementGallery/AchievementGallery";
+import StrategyMilestones from "../../components/StrategyMilestones/StrategyMilestones";
 
 function ProgressMap() {
         const {emergencyFund, tfsa, investments, studentLoan, carLoan, homeLoan, personalLoan} = useContext(FinanceContext);
@@ -70,6 +71,9 @@ function ProgressMap() {
         </section>
         <section className="achievements">
           <AchievementGallery/>
+        </section>
+        <section className="milestones">
+          <StrategyMilestones/>
         </section>
     </main> 
     );   

@@ -13,14 +13,16 @@ import ProgressMap from './pages/ProgressMap/ProgressMap'
 
 //CONTEXT IMPORTS
 import { FinanceProvider } from './context/FinanceContext';
-import { GoalsProvider } from './context/GoalsContext'
+import { GoalsProvider } from './context/GoalsContext';
+import { StrategyTrackProvider } from './context/StrategyTrackContext'
 
 function App() {
 
   return (
     <FinanceProvider>
       <GoalsProvider>
-      <BrowserRouter>
+      <StrategyTrackProvider>
+    <BrowserRouter>
     <NavBar />
     <Routes>
       <Route path="/" element={<LandingPage />} />
@@ -31,6 +33,8 @@ function App() {
     </Routes>
     <Footer />
     </BrowserRouter>
+      </StrategyTrackProvider>
+
       </GoalsProvider>
       
     </FinanceProvider>

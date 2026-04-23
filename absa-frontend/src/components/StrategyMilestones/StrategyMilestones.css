@@ -1,0 +1,139 @@
+.strategyTrackWrapper {
+  padding: 2rem;
+}
+
+.strategyTrackTitle {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+.trackCard {
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.trackHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.trackHeaderLeft {
+  flex: 1;
+}
+
+.trackName {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #111;
+  text-align: left;
+}
+
+.trackDescription {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0.25rem 0 0;
+  text-align: left;
+}
+
+.completionTopRight {
+  display: flex;
+  align-items: center;
+  background-color: #e6f7ff;
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  font-weight: bold;
+  color: #004085;
+}
+
+.completionText {
+  margin-left: 0.25rem;
+}
+
+.milestoneRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.milestoneCard {
+  flex: 1;
+  min-width: 160px;
+  border: 1px solid #6161615d;
+  border-radius: 6px;
+  padding: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  background-color: #c3c3c333;
+}
+
+.milestoneCard.hasProgress {
+  background-color: #71adf328;
+  border: 1px solid #71aef3;
+}
+
+.milestoneTop {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.milestoneYear {
+  font-weight: bold;
+  color: #3498db;
+}
+
+.milestonePercent {
+  color: black;
+}
+
+.milestoneTitle {
+  font-size: 0.9rem;
+  color: black;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressBar.noProgress {
+  background-color: #ccc;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+  background-color: #3498db;
+}
+
+.trackFooter {
+  margin-top: 1rem;
+}
+
+.statusBanner {
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  background-color: #71adf328;
+  color: black;
+}
+
+.statusEmoji {
+  margin-right: 0.5rem;
+}
