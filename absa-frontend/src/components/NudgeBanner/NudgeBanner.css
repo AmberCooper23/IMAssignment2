@@ -1,0 +1,36 @@
+.nudgeBanner {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.nudgeBannerWarning {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+}
+
+.nudgeBannerInfo {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+}
+
+.nudgeBannerSuccess {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+}
+
+.nudgeBannerIcon {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.nudgeBannerText {
+    font-size: 0.9rem;
+    color: #374151;
+    margin: 0;
+    line-height: 1.6;
+}

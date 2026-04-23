@@ -1,0 +1,135 @@
+.simulationDetail {
+    margin-top: 3rem;
+    padding: 2rem;
+}
+
+.simulationTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.simulationSubtitle {
+    font-size: 1.2rem;
+    text-align: left;
+    margin-top: 0;
+}
+
+.simulationInsightCard {
+    background-color: #e74d3c2e;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.insightCardTitle {
+    font-size: 1.5rem;
+    text-align: left;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    margin-bottom: 0;
+}
+
+.insightCardBody {
+    font-size: 0.95rem;
+    text-align: left;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    color: rgb(59, 59, 59);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.sliderRow {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.sliderCard {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.25rem 1rem;
+}
+
+.outputCardsRow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.verdictWrapper {
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 1100px) {
+    .sliderRow {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .sliderRow {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .outputCardsRow {
+        grid-template-columns: 1fr;
+    }
+}
+
+.runButtonRow {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1.5rem;
+}
+
+.runButton {
+    background-color: #e74c3c;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.runButton:hover {
+    background-color: #d52f1c;
+    transform: translateY(-1px);
+}
+
+.runButton:active {
+    transform: translateY(0);
+}
+
+.runButtonRan {
+    background-color: #16a34a;
+}
+
+.runButtonRan:hover {
+    background-color: #15803d;
+}
+
+.resultsSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    animation: fadeSlideIn 0.35s ease;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
