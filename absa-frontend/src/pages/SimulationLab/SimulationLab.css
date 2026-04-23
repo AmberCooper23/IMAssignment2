@@ -16,9 +16,8 @@
 }
 
 .overviewCard {
-    background-color: rgba(230, 157, 157, 0.466);
+    background-color: #e74d3c2e;
     border-radius: 10px;
-    border-left: 4px red solid;
     margin-top: 1rem;
 }
 

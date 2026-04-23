@@ -12,21 +12,15 @@
 }
 
 .blueCard {
-    background-color: #b6e8ee30;
-    box-shadow: #aadbe1 0px 4px 8px -2px;
-    background: linear-gradient(to bottom right, #b6e8ee9e, #b6e8ee41);
+  background-color: #71adf328;
 }
 
 .greenCard {
-    background-color: #ceefd05f;
-    box-shadow: #c7f1c9 0px 4px 8px -2px;
-    background: linear-gradient(to bottom right, #ceefd09e, #ceefd041);
+  background-color: #ecf9f1;
 }
 
 .orangeCard {
     background-color: #f1ddbb4c;
-    box-shadow: #f1ddbb 0px 4px 8px -2px;
-    background: linear-gradient(to bottom right, #f1ddbb9e, #f1ddbb22);
 }
 
 .ctaTitle {

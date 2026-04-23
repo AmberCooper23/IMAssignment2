@@ -16,9 +16,8 @@
 }
 
 .chooseJourney {
-    background-color: rgba(230, 157, 157, 0.466);
+    background-color: #e74d3c2e;
     border-radius: 10px;
-    border-left: 4px red solid;
 }
 
 .chooseJourneyTitle {
@@ -55,7 +54,7 @@
 
 
 .blueStratCard {
-    background-color: #0896a5;
+  background-color: #71aef3;
 }
 
 .blueStratCard li {
@@ -63,11 +62,11 @@
     list-style: decimal;
 }
 .blueStratCard li::marker {
-color: #0896a5;
+color: #71aef3;
 }
 
 .greenStratCard {
-    background-color: #22972a;
+  background-color: #6acf90;
 }
 
 .greenStratCard li {
@@ -76,11 +75,11 @@ color: #0896a5;
 }
 
 .greenStratCard li::marker {
-color: #22972a;
+    color: #22972a;
 }
 
 .orangeStratCard {
-    background-color: #f18e04;
+    background-color: #f2bc60;
 }
 
 .orangeStratCard li {
@@ -89,5 +88,5 @@ color: #22972a;
 }
 
 .orangeStratCard li::marker {
-    color: #f18e04;
+    color: #f2bc60;
 }

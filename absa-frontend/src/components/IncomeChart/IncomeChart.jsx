@@ -1,4 +1,3 @@
-// IncomeBreakdownDonut.jsx
 import React, { useContext } from "react";
 import { PieChart, Pie, Cell, Legend } from "recharts";
 import FinanceContext from "../../context/FinanceContext";
@@ -6,11 +5,10 @@ import FinanceContext from "../../context/FinanceContext";
 function IncomeBreakdownDonut() {
   const { income, tax, ra, medicalAid } = useContext(FinanceContext);
 
-  // Take Home is whatever remains, but never negative
   const takeHome = Math.max(income - (tax + ra + medicalAid), 0);
 
   const data = [
-    { name: "Tax", value: tax, color: "#d9534f" },
+    { name: "Tax", value: tax, color: "#e74c3c" },
     { name: "Retirement Annuity", value: ra, color: "#f0ad4e" },
     { name: "Medical Aid", value: medicalAid, color: "#5bc0de" },
     { name: "Take Home", value: takeHome, color: "#5cb85c" }

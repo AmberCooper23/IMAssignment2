@@ -18,14 +18,15 @@
 }
 
 .preHeroText {
-    background-color: pink;
-    color: red;
+    background-color: #e74d3c38;
+    color: #e74c3c;
     border-radius: 20px;
     font-size: 0.9rem;
     margin-top: 1rem;
     padding: 0.25rem 0.75rem;
     display: inline-block;
     max-width: fit-content;
+    font-weight: bold;
 
 }
 
@@ -46,7 +47,7 @@
 }
 
 .ctaButton {
-    background-color: red;
+    background-color: #e74c3c;
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -164,7 +165,7 @@
 }
 
 .ctaFooter {
-    background-color: red;
+    background-color: #e74c3c;
     text-align: center;
     padding: 1.5rem;
 }
@@ -184,7 +185,7 @@
 
 .ctaFooterButton {
     background-color: white;
-    color: red;
+    color: #e74c3c;
     border: none;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
