@@ -67,6 +67,47 @@ progress::-moz-progress-bar {
   border-radius: 9px;
 }
 
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+progress[value]::-webkit-progress-value {
+  border-radius: 4px;
+}
+
+.progress-red::-webkit-progress-value { 
+  background-color: #e74c3c; 
+}
+
+.progress-orange::-webkit-progress-value { 
+  background-color: #e67e22; 
+}
+.progress-yellow::-webkit-progress-value { 
+  background-color: #530ff1; 
+}
+
+.progress-green::-webkit-progress-value { 
+  background-color: #2ecc71; 
+}
+
+.progress-red::-moz-progress-bar { 
+  background-color: #e74c3c; 
+}
+
+.progress-orange::-moz-progress-bar { 
+  background-color: #e67e22; 
+}
+.progress-yellow::-moz-progress-bar { 
+  background-color: #400ff1; 
+}
+
+.progress-green::-moz-progress-bar { 
+  background-color: #2ecc71; 
+}
+
+
+
 
 .note {
   font-size: 0.85rem;
