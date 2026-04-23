@@ -83,23 +83,7 @@ function StrategyTrack() {
             <ComparisonTable/>
         </section>
 
-        <section className="ctaCardContainer">
-        <CTACard
-        title="Money Snapshot"
-        text="Review your financial character sheet before choosing a track."
-        className="blueCard"
-        />
-        <CTACard
-        title="Run Simulations"
-        text="Test financial decisions with interactive scenarios."
-        className="greenCard"
-        />
-        <CTACard
-        title="Track Milestones"
-        text="View your progress map and achievements."
-        className="orangeCard"
-        />
-        </section>
+        
         </main>
     );
 }

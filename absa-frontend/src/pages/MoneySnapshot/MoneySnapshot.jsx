@@ -92,16 +92,19 @@ return (
         title="Strategy Track"
         text="Select a strategy track for your 5 year journey."
         className="blueCard"
+        to="/strategyTrack"
         />
         <CTACard
         title="Run Simulations"
         text="Test financial decisions with interactive scenarios."
         className="greenCard"
+        to="/simulationLab"
         />
         <CTACard
         title="Track Milestones"
         text="View your progress map and achievements."
         className="orangeCard"
+        to="/progressMap"
         />
         </section>
     </main>
