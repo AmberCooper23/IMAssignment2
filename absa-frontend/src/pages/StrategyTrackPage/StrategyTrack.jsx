@@ -42,6 +42,7 @@ function StrategyTrack() {
                 "Bond Approval"
             ]}
             className="blueStratCard"
+            to="/tracks/first-property"
             />
             <StrategyTrackCard
             strategyTrack="Balanced Lifestyle & Investing"
