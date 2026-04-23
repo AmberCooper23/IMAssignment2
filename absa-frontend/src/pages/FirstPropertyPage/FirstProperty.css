@@ -10,7 +10,7 @@
 }
 
 .trackDetailTitle {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
     line-height: 1.2;
@@ -19,20 +19,19 @@
 }
 
 .trackDetailSubtitle {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #666;
     max-width: 700px;
     line-height: 1.5;
     text-align: left;
 }
 
-/* Milestones Section */
 .milestones {
     margin-bottom: 3rem;
 }
 
 .milestonesTitle {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 1.5rem;
     color: black;
@@ -40,7 +39,7 @@
 
 .milestoneRow {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1.5rem;
 }
 
