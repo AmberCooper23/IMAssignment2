@@ -23,7 +23,7 @@ function NavBar() {
                 </li>
             </ul>
 
-            <button className="loginButton">Login</button>
+            <button className="loginButton">@ Amberr</button>
         </nav>
     );
 }
