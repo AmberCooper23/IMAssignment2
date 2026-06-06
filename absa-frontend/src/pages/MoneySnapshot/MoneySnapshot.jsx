@@ -12,8 +12,14 @@ import DebtPayoffCard from "../../components/DebtPayoffCard/DebtPayoffCard";
 import EditProfileModal from "../../components/EditProfileModal/EditProfileModal";
 
 function MoneySnapshot() {
-  const { income, takeHome, savingsRate, totalDebt } =
-    useContext(FinanceContext);
+  const {
+    income,
+    takeHome,
+    savingsRate,
+    totalDebt,
+    goalSavingsRate,
+    goalDebtFreeYear,
+  } = useContext(FinanceContext);
 
   const [showModal, setShowModal] = useState(false);
 
@@ -47,6 +53,10 @@ function MoneySnapshot() {
               ? "This may affect bond approval."
               : "This is within a safe range."}
           </li>
+          <li>
+            Target savings rate: {goalSavingsRate}% | Debt-free by{" "}
+            {goalDebtFreeYear}
+          </li>
         </ul>
       </section>
 
@@ -73,17 +83,6 @@ function MoneySnapshot() {
         />
       </section>
 
-      <section className="moneySnapshotGraphs">
-        <article className="incomeChartContainer">
-          <h1 className="incomeChartHeader">Income Breakdown</h1>
-          <IncomeChart />
-        </article>
-        <article className="expenseChartContainer">
-          <h1 className="expenseChartHeader">Expense Breakdown</h1>
-          <ExpenseChart />
-        </article>
-      </section>
-
       <section className="southAfricanTaxCard">
         <article className="southAfricanTaxCardContainer">
           <h2 className="southAfricanTaxCardHeader">
@@ -100,22 +99,22 @@ function MoneySnapshot() {
 
       <section className="ctaCardContainer">
         <CTACard
-          title="Strategy Track"
-          text="Select a strategy track for your 5 year journey."
+          title="Detailed Budget Plan"
+          text="View your customisable in-depth breakdown of income, expenses, savings and debt."
           className="blueCard"
           to="/strategyTrack"
-        />
-        <CTACard
-          title="Run Simulations"
-          text="Test financial decisions with interactive scenarios."
-          className="greenCard"
-          to="/simulationLab"
         />
         <CTACard
           title="Track Milestones"
           text="View your progress map and achievements."
           className="orangeCard"
           to="/progressMap"
+        />
+        <CTACard
+          title="Run Simulations"
+          text="Test financial decisions with interactive scenarios."
+          className="greenCard"
+          to="/simulationLab"
         />
       </section>
 
