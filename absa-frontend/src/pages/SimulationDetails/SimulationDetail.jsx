@@ -19,8 +19,8 @@ function SimulationDetail() {
   const [financeRate, setFinanceRate] = useState(13);
   const [investmentReturn, setInvestmentReturn] = useState(9);
   const [timeHorizon, setTimeHorizon] = useState(5);
-  const [standardDepRate, setStandardDepRate] = useState(15); // % per year
-  const [luxuryDepRate, setLuxuryDepRate] = useState(20); // % per year
+  const [standardDepRate, setStandardDepRate] = useState(15);
+  const [luxuryDepRate, setLuxuryDepRate] = useState(20);
 
   const calcMonthlyPayment = (price) => {
     const deposit = price * 0.1;
