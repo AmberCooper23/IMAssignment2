@@ -22,7 +22,6 @@ function EditProfileModal({ onClose }) {
 
   const [activeTab, setActiveTab] = useState("income");
 
-  // Local draft state
   const [draftIncome, setDraftIncome] = useState(income);
   const [draftTax, setDraftTax] = useState(tax);
   const [draftSavingsRate, setDraftSavingsRate] = useState(savingsRate);
@@ -33,16 +32,13 @@ function EditProfileModal({ onClose }) {
   const [draftGoalDebtFreeYear, setDraftGoalDebtFreeYear] =
     useState(goalDebtFreeYear);
 
-  // Error state
   const [errors, setErrors] = useState({});
 
-  // Validation helper
   const sanitizeNumberInput = (field, value) => {
-    // Allow digits, decimal point, and minus sign
     const cleaned = value.replace(/[^0-9.-]/g, "");
     if (cleaned === "" || cleaned === "-" || cleaned === ".") {
       setErrors((prev) => ({ ...prev, [field]: null }));
-      return cleaned; // keep showing raw input
+      return cleaned;
     }
 
     const num = parseFloat(cleaned);
@@ -53,11 +49,10 @@ function EditProfileModal({ onClose }) {
 
     if (num < 0) {
       setErrors((prev) => ({ ...prev, [field]: "Value cannot be negative" }));
-      return cleaned; // keep showing the negative so user sees it
+      return cleaned;
     }
 
     setErrors((prev) => ({ ...prev, [field]: null }));
-    // Round to 2 decimals
     return Math.round(num * 100) / 100;
   };
 
@@ -83,7 +78,6 @@ function EditProfileModal({ onClose }) {
           <p>Update your current financial details and long‑term goals.</p>
         </header>
 
-        {/* Tab Navigation */}
         <nav className="modalNav">
           <button
             className={`income ${activeTab === "income" ? "active income" : ""}`}

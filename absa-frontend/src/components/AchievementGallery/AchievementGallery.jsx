@@ -15,10 +15,11 @@ function AchievementGallery() {
     homeLoan,
     homeLoanOriginal,
     income,
-    ra
+    ra,
   } = useContext(FinanceContext);
 
-  const totalDebtOriginal = studentLoanOriginal + carLoanOriginal + homeLoanOriginal;
+  const totalDebtOriginal =
+    studentLoanOriginal + carLoanOriginal + homeLoanOriginal;
   const totalDebtCurrent = studentLoan + carLoan + homeLoan;
   const debtPaidPercent =
     totalDebtOriginal > 0
@@ -30,38 +31,38 @@ function AchievementGallery() {
       title: "Emergency Fund Starter",
       description: "Saved your first R10,000 in emergency funds",
       unlocked: emergencyFund >= 10000,
-      emoji: "💪" // muscle emoji
+      emoji: "💪",
     },
     {
       title: "RA Champion",
       description: "Contributing 10%+ to your Retirement Annuity",
-      unlocked: income > 0 && (ra / income) >= 0.1,
-      emoji: "🏆" // trophy emoji
+      unlocked: income > 0 && ra / income >= 0.1,
+      emoji: "🏆",
     },
     {
       title: "TFSA Explorer",
       description: "Opened and funded your Tax-Free Savings Account",
       unlocked: tfsa > 0,
-      emoji: "🎯" // target emoji
+      emoji: "🎯",
     },
     {
       title: "Debt Defeater",
       description: "Pay off 25% of your total debt",
       unlocked: debtPaidPercent >= 25,
-      emoji: "⚔️" // crossed swords emoji
+      emoji: "⚔️",
     },
     {
       title: "Offshore Pioneer",
       description: "Allocate 10% of portfolio to offshore investments",
       unlocked: offshorePercent >= 10,
-      emoji: "🌍" // globe emoji
+      emoji: "🌍",
     },
     {
       title: "Emergency Fund Master",
       description: "Save 6 months of expenses",
       unlocked: emergencyFund >= (income / 2) * 6,
-      emoji: "🛡️" // shield emoji
-    }
+      emoji: "🛡️",
+    },
   ];
 
   return (
@@ -73,7 +74,6 @@ function AchievementGallery() {
             key={index}
             className={`achievementCard ${ach.unlocked ? "unlocked" : "locked"}`}
           >
-            {/* Top-left emoji */}
             <p className="emojiIcon">{ach.emoji}</p>
 
             <header>
@@ -81,7 +81,6 @@ function AchievementGallery() {
             </header>
             <p className="description">{ach.description}</p>
 
-            {/* Top-right status icon */}
             {ach.unlocked ? (
               <svg
                 className="checkIcon"

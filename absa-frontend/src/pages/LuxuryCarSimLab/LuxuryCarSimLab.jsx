@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import "./SimulationDetail.css";
+import "../SimulationDetails/SimulationDetail.css";
 import SimulationSlider from "../../components/SimulationSlider/SimulationSlider";
 import VerdictTile from "../../components/VerdictTiles/VerdictTile";
 import FinanceContext from "../../context/FinanceContext";
@@ -7,7 +7,7 @@ import CostVsInvestmentGraph from "../../components/CarVsInvestmentGraph/CarVsIn
 
 import luxuryCarSimLabBanner from "../../assets/LuxuryCarSimLabBanner.png";
 
-function SimulationDetail() {
+function LuxuryCarSimLab() {
   const { income } = useContext(FinanceContext);
 
   const [salary, setSalary] = useState(income || 30000);
@@ -276,4 +276,4 @@ function SimulationDetail() {
   );
 }
 
-export default SimulationDetail;
+export default LuxuryCarSimLab;

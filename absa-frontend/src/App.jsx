@@ -1,20 +1,19 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
-//COMPONENT IMPORTS
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 
-//PAGE IMPORTS
 import LandingPage from "./pages/LandingPage/LandingPage";
 import MoneySnapshot from "./pages/MoneySnapshot/MoneySnapshot";
 import StrategyTrack from "./pages/StrategyTrackPage/StrategyTrack";
 import SimulationLab from "./pages/SimulationLab/SimulationLab";
 import ProgressMap from "./pages/ProgressMap/ProgressMap";
-import SimulationDetail from "./pages/SimulationDetails/SimulationDetail";
+import LuxuryCarSimLab from "./pages/LuxuryCarSimLab/LuxuryCarSimLab";
+import PropertySimLab from "./pages/PropertySimLab/PropertySimLab";
+import LocalVsOffshoreSimLab from "./pages/LocalVsOffshoreSimLab/LocalVsOffshoreSimLab";
 import FirstPropertyPath from "./pages/FirstPropertyPage/FirstProperty";
 import BudgetPlan from "./pages/BudgetPlan/BudgetPlan";
 
-//CONTEXT IMPORTS
 import { FinanceProvider } from "./context/FinanceContext";
 import { GoalsProvider } from "./context/GoalsContext";
 import { StrategyTrackProvider } from "./context/StrategyTrackContext";
@@ -34,7 +33,15 @@ function App() {
               <Route path="/progressMap" element={<ProgressMap />} />
               <Route
                 path="/simulation/luxury-car-vs-investments"
-                element={<SimulationDetail />}
+                element={<LuxuryCarSimLab />}
+              />
+              <Route
+                path="/simulation/property-vs-renting"
+                element={<PropertySimLab />}
+              />
+              <Route
+                path="/simulation/local-vs-offshore"
+                element={<LocalVsOffshoreSimLab />}
               />
               <Route
                 path="/tracks/first-property"

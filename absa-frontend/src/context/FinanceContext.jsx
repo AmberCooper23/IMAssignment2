@@ -3,20 +3,17 @@ import React, { createContext, useState } from "react";
 const FinanceContext = createContext();
 
 function FinanceProvider({ children }) {
-  // Income & deductions
   const [income, setIncome] = useState(70000);
   const [tax, setTax] = useState(19357);
   const [ra, setRa] = useState(11000);
   const [medicalAid, setMedicalAid] = useState(9000);
 
-  // Savings & Investments
   const [savingsRate, setSavingsRate] = useState(25);
   const [emergencyFund, setEmergencyFund] = useState(150000);
   const [tfsa, setTfsa] = useState(36000);
   const [investments, setInvestments] = useState(50000);
   const [offshoreInvestments, setOffshoreInvestments] = useState(5000);
 
-  // Debt
   const [studentLoan, setStudentLoan] = useState(0);
   const [studentLoanOriginal] = useState(150000);
   const [studentLoanPayment, setStudentLoanPayment] = useState(0);
@@ -33,7 +30,6 @@ function FinanceProvider({ children }) {
   const [personalLoanOriginal] = useState(0);
   const [personalLoanPayment, setPersonalLoanPayment] = useState(0);
 
-  // Derived values
   const takeHome = income - tax - ra - medicalAid;
   const totalDebt = studentLoan + homeLoan + carLoan + personalLoan;
   const deductions = tax + ra + medicalAid;
