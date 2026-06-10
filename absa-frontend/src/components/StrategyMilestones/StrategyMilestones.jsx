@@ -13,7 +13,7 @@ function StrategyTrackMilestones() {
         const inProgress = track.milestones.filter(m => m.progress > 0 && m.progress < 100).length;
 
         return (
-          <article key={track.id} className="trackCard">
+          <article key={track.id} className={`trackCard ${track.id}Track`}>
             <header className="trackHeader">
               <div className="trackHeaderLeft">
                 <h3 className="trackName">{track.name}</h3>
