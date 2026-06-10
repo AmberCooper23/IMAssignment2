@@ -1,0 +1,102 @@
+.budgetPlanTab {
+  margin-top: 2rem;
+}
+
+.budgetPlanHeader {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.budgetPlanTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.budgetPlanSubtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.categoryTitle {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  color: #2c3e50;
+}
+
+.budgetCategoryTable {
+  margin-bottom: 2rem;
+}
+
+.budgetCategoryTable table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.budgetCategoryTable th,
+.budgetCategoryTable td {
+  border: 1px solid #ddd;
+  padding: 0.6rem;
+  text-align: left;
+}
+
+.budgetCategoryTable th {
+  background-color: #f4f6f8;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.budgetCategoryTable input {
+  width: 100%;
+  padding: 0.2rem 0.3rem;
+  border: none;
+  background: transparent;
+  font-size: 0.95rem;
+  color: #2c3e50;
+}
+
+.budgetCategoryTable input:focus {
+  outline: none;
+  background-color: #eaf4fd;
+}
+
+.diffCell {
+  font-weight: bold;
+  text-align: right;
+  color: #2c3e50;
+}
+
+.categoryTotalsRow td {
+  background-color: #fafafa;
+  font-weight: bold;
+}
+
+.addRowBtn {
+  background: none;
+  border: none;
+  color: #3498db;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease;
+}
+
+.addRowBtn:hover {
+  color: #2980b9;
+}
+
+.budgetTotals {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-top: 2px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: #2c3e50;
+}

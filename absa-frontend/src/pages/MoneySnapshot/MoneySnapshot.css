@@ -48,69 +48,39 @@
   transform: translateY(0);
 }
 
-.financialStoryContainer {
-  background-color: #e74d3c2e;
-  border-radius: 10px;
-}
-
-.storyTitle {
-  font-size: 1.5rem;
-  text-align: left;
-  padding-left: 1rem;
-  padding-top: 1rem;
-  margin-bottom: 0;
-}
-
-.storyText {
-  font-size: 0.95rem;
-  text-align: left;
-  padding-left: 1rem;
-  padding-bottom: 1rem;
-  color: rgb(59, 59, 59);
-  white-space: pre-line;
-  list-style: none;
-}
-
-.moneySnapshotCardContainer {
+.snapshotNav {
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
+  border-bottom: 2px solid #eee;
 }
 
-.moneySnapshotGraphs {
-  display: flex;
-  gap: 2rem;
-  margin-top: 2rem;
+.snapshotNav button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #555;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    border-bottom 0.2s ease;
 }
 
-.southAfricanTaxCard {
-  align-items: left;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  margin-top: 2rem;
+.snapshotNav button:hover {
+  color: #3498db;
 }
 
-.southAfricanTaxCardContainer {
-  align-items: left;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: left;
+.snapshotNav button.active {
+  color: #3498db;
+  border-bottom: 3px solid #3498db;
 }
 
-.southAfricanTaxCardHeader {
-  font-size: 1.5rem;
-  text-align: left;
-  padding-left: 1rem;
-  margin-bottom: 0;
-  font-weight: bold;
-  padding-top: 1rem;
-}
-
-.savingsAndDebtContainer {
-  display: flex;
-  gap: 2rem;
-  margin-top: 2rem;
-  border-radius: 10px;
-  padding: 1rem;
+@media (max-width: 768px) {
+  .moneySnapshotCardContainer,
+  .savingsAndDebtContainer,
+  .ctaCardContainer {
+    flex-direction: column;
+  }
 }

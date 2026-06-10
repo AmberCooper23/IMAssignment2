@@ -1,27 +1,16 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import "./MoneySnapshot.css";
 
-import MoneySnapshotCard from "../../components/MoneySnapshotCard/MoneySnapshotCard";
-import CTACard from "../../components/ctaCard/ctaCard";
-import FinanceContext from "../../context/FinanceContext";
-import IncomeChart from "../../components/IncomeChart/IncomeChart";
-import ExpenseChart from "../../components/ExpenseChart/ExpenseChart";
-import TaxBenefitsSummary from "../../components/SouthAfricanTaxCard/SouthAfricanTaxCard";
-import SavingProgressCard from "../../components/SavingProgressCard/SavingProgressCard";
-import DebtPayoffCard from "../../components/DebtPayoffCard/DebtPayoffCard";
 import EditProfileModal from "../../components/EditProfileModal/EditProfileModal";
+import OverviewTab from "../../components/Tabs/OverviewTab/OverviewTab";
+import SavingsTab from "../../components/Tabs/SavingsTab/SavingsTab";
+import DebtTab from "../../components/Tabs/DebtTab/DebtTab";
+import GoalsTab from "../../components/Tabs/GoalsTab/GoalsTab";
+import BudgetPlanTab from "../../components/Tabs/BudgetPlanTab/BudgetPlanTab";
 
 function MoneySnapshot() {
-  const {
-    income,
-    takeHome,
-    savingsRate,
-    totalDebt,
-    goalSavingsRate,
-    goalDebtFreeYear,
-  } = useContext(FinanceContext);
-
   const [showModal, setShowModal] = useState(false);
+  const [activeTab, setActiveTab] = useState("overview");
 
   return (
     <main className="moneySnapshot">
@@ -37,86 +26,44 @@ function MoneySnapshot() {
         </div>
       </header>
 
-      <section className="financialStoryContainer">
-        <h1 className="storyTitle">Your Financial Story</h1>
-        <ul className="storyText">
-          <li>
-            You're building a foundation with a {savingsRate}% savings rate.{" "}
-            {savingsRate < 10
-              ? "This is below average — consider increasing it."
-              : "This is healthy for your income band."}
-          </li>
-          <li>
-            Your debt-to-income ratio is{" "}
-            {((totalDebt / income) * 100).toFixed(1)}%.{" "}
-            {totalDebt / income > 0.4
-              ? "This may affect bond approval."
-              : "This is within a safe range."}
-          </li>
-          <li>
-            Target savings rate: {goalSavingsRate}% | Debt-free by{" "}
-            {goalDebtFreeYear}
-          </li>
-        </ul>
-      </section>
+      <nav className="snapshotNav">
+        <button
+          className={activeTab === "overview" ? "active" : ""}
+          onClick={() => setActiveTab("overview")}
+        >
+          Overview
+        </button>
+        <button
+          className={activeTab === "savings" ? "active" : ""}
+          onClick={() => setActiveTab("savings")}
+        >
+          Savings
+        </button>
+        <button
+          className={activeTab === "debt" ? "active" : ""}
+          onClick={() => setActiveTab("debt")}
+        >
+          Debt
+        </button>
+        <button
+          className={activeTab === "goals" ? "active" : ""}
+          onClick={() => setActiveTab("goals")}
+        >
+          Goals
+        </button>
+        <button
+          className={activeTab === "budgetPlan" ? "active" : ""}
+          onClick={() => setActiveTab("budgetPlan")}
+        >
+          Budget Plan
+        </button>
+      </nav>
 
-      <section className="moneySnapshotCardContainer">
-        <MoneySnapshotCard
-          title="Monthly Income"
-          number={`R${income}`}
-          subtitle="Before deductions"
-        />
-        <MoneySnapshotCard
-          title="Take Home"
-          number={`R${takeHome}`}
-          subtitle="After tax & deductions"
-        />
-        <MoneySnapshotCard
-          title="Savings Rate"
-          number={`${savingsRate}%`}
-          subtitle="Of take-home pay"
-        />
-        <MoneySnapshotCard
-          title="Total Debt"
-          number={`R${totalDebt}`}
-          subtitle="Student + Car finance"
-        />
-      </section>
-
-      <section className="southAfricanTaxCard">
-        <article className="southAfricanTaxCardContainer">
-          <h2 className="southAfricanTaxCardHeader">
-            South African Tax & Benefits
-          </h2>
-          <TaxBenefitsSummary />
-        </article>
-      </section>
-
-      <section className="savingsAndDebtContainer">
-        <SavingProgressCard />
-        <DebtPayoffCard />
-      </section>
-
-      <section className="ctaCardContainer">
-        <CTACard
-          title="Detailed Budget Plan"
-          text="View your customisable in-depth breakdown of income, expenses, savings and debt."
-          className="blueCard"
-          to="/strategyTrack"
-        />
-        <CTACard
-          title="Track Milestones"
-          text="View your progress map and achievements."
-          className="orangeCard"
-          to="/progressMap"
-        />
-        <CTACard
-          title="Run Simulations"
-          text="Test financial decisions with interactive scenarios."
-          className="greenCard"
-          to="/simulationLab"
-        />
-      </section>
+      {activeTab === "overview" && <OverviewTab />}
+      {activeTab === "savings" && <SavingsTab />}
+      {activeTab === "debt" && <DebtTab />}
+      {activeTab === "goals" && <GoalsTab />}
+      {activeTab === "budgetPlan" && <BudgetPlanTab />}
 
       {showModal && <EditProfileModal onClose={() => setShowModal(false)} />}
     </main>

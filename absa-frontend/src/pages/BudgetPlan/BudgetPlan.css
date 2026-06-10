@@ -1,0 +1,100 @@
+.budgetPlan {
+  margin-top: 3rem;
+  padding: 2rem;
+}
+
+.budgetPlanHeader {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.budgetPlanTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.budgetPlanSubtitle {
+  font-size: 1.2rem;
+  text-align: left;
+  margin: 0;
+  color: #333;
+}
+
+.budgetChartsContainer {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.incomeChartContainer,
+.expenseChartContainer {
+  flex: 1;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  background-color: #fff;
+  padding: 1rem;
+}
+
+.chartHeader {
+  font-size: 1.5rem;
+  text-align: left;
+  padding-left: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.southAfricanTaxCard {
+  align-items: left;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.southAfricanTaxCardContainer {
+  align-items: left;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.southAfricanTaxCardHeader {
+  font-size: 1.5rem;
+  text-align: left;
+  padding-left: 1rem;
+  margin-bottom: 0;
+  font-weight: bold;
+  padding-top: 1rem;
+}
+
+.savingsAndDebtContainer {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.savingsAndDebtContainer > * {
+  flex: 1;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .budgetChartsContainer,
+  .savingsAndDebtContainer {
+    flex-direction: column;
+  }
+
+  .incomeChartContainer,
+  .expenseChartContainer,
+  .savingsAndDebtContainer > * {
+    flex: 1 1 100%;
+  }
+}
