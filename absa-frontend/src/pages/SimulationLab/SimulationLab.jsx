@@ -2,6 +2,7 @@ import React from "react";
 import "./SimulationLab.css";
 import InsightCard from "../../components/InsightCard/InsightCard";
 import SimulationLabCard from "../../components/SimulationLabCards/SimulationLabCard";
+import Tooltip from "../../components/Tooltip/Tooltip"; // ✅ NEW
 
 function SimulationLab() {
   return (
@@ -18,9 +19,9 @@ function SimulationLab() {
         <h2 className="overviewCardTitle">Experiment with Confidence!</h2>
         <p className="overviewCardText">
           Each simulation uses South African financial context - SARS rates,
-          property markets, JSE vs offshore returns - to give you realistic
-          forecasts. Play with the inputs to see how different choices impact
-          your journey.
+          property markets, JSE vs <Tooltip term="offshoreInvestments" /> returns
+          - to give you realistic forecasts. Play with the inputs to see how
+          different choices impact your journey.
         </p>
       </section>
 
@@ -85,6 +86,17 @@ function SimulationLab() {
             className="orangeCard"
           />
         </section>
+      </section>
+
+      {/* ✅ Educational explainer */}
+      <section className="learningLayer">
+        <h2 className="learningTitle">Learning Through Simulation</h2>
+        <p className="learningText">
+          Simulations help you understand the trade-offs between{" "}
+          <Tooltip term="emergencyFund" />, <Tooltip term="investments" />, and{" "}
+          <Tooltip term="debt" />. By experimenting safely, you build financial
+          literacy and confidence in real-world decisions.
+        </p>
       </section>
     </main>
   );

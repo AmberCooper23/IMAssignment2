@@ -63,19 +63,16 @@ function MoneySnapshot({ user }) {
         </button>
       </nav>
 
-      {/* Tabs always visible */}
       {activeTab === "overview" && <OverviewTab disabled={!user} />}
       {activeTab === "savings" && <SavingsTab disabled={!user} />}
       {activeTab === "debt" && <DebtTab disabled={!user} />}
       {activeTab === "goals" && <GoalsTab disabled={!user} />}
       {activeTab === "budgetPlan" && <BudgetPlanTab disabled={!user} />}
 
-      {/* Modal only works if logged in */}
       {showModal && user && (
         <EditProfileModal onClose={() => setShowModal(false)} />
       )}
 
-      {/* Notice for logged-out users */}
       {!user && (
         <div className="loginNotice">
           <p>

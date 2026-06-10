@@ -3,7 +3,6 @@ import React, { createContext, useState, useEffect } from "react";
 const FinanceContext = createContext();
 
 function FinanceProvider({ children, user }) {
-  // Default placeholders (for logged-out users)
   const defaultFinance = {
     income: 0,
     tax: 0,
@@ -22,7 +21,6 @@ function FinanceProvider({ children, user }) {
 
   const [financeData, setFinanceData] = useState(defaultFinance);
 
-  // Load user-specific finance data from localStorage when logged in
   useEffect(() => {
     if (user) {
       const savedFinance = localStorage.getItem(
@@ -31,16 +29,13 @@ function FinanceProvider({ children, user }) {
       if (savedFinance) {
         setFinanceData(JSON.parse(savedFinance));
       } else {
-        // If no saved data, start with defaults
         setFinanceData(defaultFinance);
       }
     } else {
-      // Reset to defaults when logged out
       setFinanceData(defaultFinance);
     }
   }, [user]);
 
-  // Save finance data to localStorage whenever it changes (only if logged in)
   useEffect(() => {
     if (user) {
       localStorage.setItem(
@@ -50,7 +45,6 @@ function FinanceProvider({ children, user }) {
     }
   }, [user, financeData]);
 
-  // Derived values
   const takeHome =
     financeData.income -
     financeData.tax -

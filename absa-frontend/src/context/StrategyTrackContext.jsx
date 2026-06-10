@@ -16,7 +16,6 @@ function StrategyTrackProvider({ children, user }) {
     totalDebt,
   } = useContext(FinanceContext);
 
-  // Helper: if not logged in, return 0 progress
   const progressValue = (val) => (user ? val : 0);
 
   const tracks = [
@@ -28,12 +27,16 @@ function StrategyTrackProvider({ children, user }) {
         {
           year: 1,
           title: "Emergency Fund",
-          progress: progressValue(Math.min((emergencyFund / 250000) * 100, 100)),
+          progress: progressValue(
+            Math.min((emergencyFund / 250000) * 100, 100),
+          ),
         },
         {
           year: 2,
           title: "Deposit Ready",
-          progress: progressValue(Math.min((emergencyFund / 500000) * 100, 100)),
+          progress: progressValue(
+            Math.min((emergencyFund / 500000) * 100, 100),
+          ),
         },
         {
           year: 3,
@@ -60,27 +63,37 @@ function StrategyTrackProvider({ children, user }) {
         {
           year: 1,
           title: "RA Contributions",
-          progress: progressValue(income > 0 ? Math.min((ra / income) * 100, 100) : 0),
+          progress: progressValue(
+            income > 0 ? Math.min((ra / income) * 100, 100) : 0,
+          ),
         },
         {
           year: 2,
           title: "Balanced Portfolio",
-          progress: progressValue(investments > 0 ? Math.min((investments / 200000) * 100, 100) : 0),
+          progress: progressValue(
+            investments > 0 ? Math.min((investments / 200000) * 100, 100) : 0,
+          ),
         },
         {
           year: 3,
           title: "Offshore Start",
-          progress: progressValue(offshorePercent >= 5 ? 100 : offshorePercent * 20),
+          progress: progressValue(
+            offshorePercent >= 5 ? 100 : offshorePercent * 20,
+          ),
         },
         {
           year: 4,
           title: "Diversified Growth",
-          progress: progressValue(investments >= 500000 ? 100 : (investments / 500000) * 100),
+          progress: progressValue(
+            investments >= 500000 ? 100 : (investments / 500000) * 100,
+          ),
         },
         {
           year: 5,
           title: "20% Offshore",
-          progress: progressValue(offshorePercent >= 20 ? 100 : offshorePercent * 5),
+          progress: progressValue(
+            offshorePercent >= 20 ? 100 : offshorePercent * 5,
+          ),
         },
       ],
     },
@@ -92,7 +105,9 @@ function StrategyTrackProvider({ children, user }) {
         {
           year: 1,
           title: "Max RA",
-          progress: progressValue(income > 0 ? Math.min((ra / (income * 0.275)) * 100, 100) : 0),
+          progress: progressValue(
+            income > 0 ? Math.min((ra / (income * 0.275)) * 100, 100) : 0,
+          ),
         },
         {
           year: 2,
@@ -107,12 +122,16 @@ function StrategyTrackProvider({ children, user }) {
         {
           year: 4,
           title: "Currency Diversification",
-          progress: progressValue(offshorePercent >= 15 ? 100 : offshorePercent * 6.6),
+          progress: progressValue(
+            offshorePercent >= 15 ? 100 : offshorePercent * 6.6,
+          ),
         },
         {
           year: 5,
           title: "Diversified Global Portfolio",
-          progress: progressValue(offshorePercent >= 30 ? 100 : offshorePercent * 3.3),
+          progress: progressValue(
+            offshorePercent >= 30 ? 100 : offshorePercent * 3.3,
+          ),
         },
       ],
     },

@@ -1,0 +1,32 @@
+.tooltipContainer {
+  position: relative;
+  display: inline-block;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+.tooltipIcon {
+  font-size: 0.9em;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+/* Tooltip inherits BlueNudgeCard look */
+.tooltipCard {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  z-index: 20;
+  bottom: 125%; /* show above the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
+
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show on hover */
+.tooltipContainer:hover .tooltipCard {
+  visibility: visible;
+  opacity: 1;
+}

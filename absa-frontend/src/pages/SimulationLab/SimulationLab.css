@@ -1,85 +1,107 @@
 .simulationLab {
-    margin-top: 3rem;
-    padding: 2rem;
+  margin-top: 3rem;
+  padding: 2rem;
 }
 
 .simulationLabTitle {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: left;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: left;
 }
 
 .simulationLabSubtitle {
-    font-size: 1.2rem;
-    text-align: left; 
-    margin-top: 0rem;
+  font-size: 1.2rem;
+  text-align: left;
+  margin-top: 0rem;
 }
 
 .overviewCard {
-    background-color: #e74d3c2e;
-    border-radius: 10px;
-    margin-top: 1rem;
+  background-color: #e74d3c2e;
+  border-radius: 10px;
+  margin-top: 1rem;
 }
 
 .overviewCardTitle {
-    font-size: 1.5rem;
-    text-align: left;
-    padding-left: 1rem;
-    padding-top: 1rem;
-    margin-bottom: 0;
+  font-size: 1.5rem;
+  text-align: left;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  margin-bottom: 0;
 }
 
 .overviewCardText {
-    font-size: 0.95rem;
-    text-align: left;
-    padding-left: 1rem;
-    padding-bottom: 1rem;
-    color: rgb(59, 59, 59);
-    white-space: pre-line;
-    list-style: none;
+  font-size: 0.95rem;
+  text-align: left;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  color: rgb(59, 59, 59);
+  white-space: pre-line;
+  list-style: none;
 }
 
 .simulationLabCardContainer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    padding: 2.5rem;
-    margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2.5rem;
+  margin-top: 1rem;
 }
 
 .insightsTitle {
-    font-size: 1.5rem;
-    text-align: left;
-    margin-left: 1.5rem;
-    margin-bottom: 0rem;
+  font-size: 1.5rem;
+  text-align: left;
+  margin-left: 1.5rem;
+  margin-bottom: 0rem;
 }
 
 .blueSimCard {
-    background-color: #0896a5;
+  background-color: #0896a5;
 }
 
 .greenSimCard {
-    background-color: #22972a;
+  background-color: #22972a;
 }
 
 .orangeSimCard {
-    background-color: #f18e04;
+  background-color: #f18e04;
 }
 
 .insightCardContainer {
-    display: flex;
-    gap: 2rem;
-    padding: 1.5rem;
+  display: flex;
+  gap: 2rem;
+  padding: 1.5rem;
 }
 
 .blueCard {
-    background-color: #0895a53b;
+  background-color: #0895a53b;
 }
 
 .greenCard {
-    background-color: #22972a1e;
+  background-color: #22972a1e;
 }
 
 .orangeCard {
-    background-color: #f18e0431;
+  background-color: #f18e0431;
+}
+
+.learningLayer {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 2px solid transparent;
+  background: #f0fdf4; /* same as BlueNudgeSuccess */
+  border-color: #bbf7d0;
+}
+
+.learningTitle {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  color: #111827;
+}
+
+.learningText {
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.4;
 }

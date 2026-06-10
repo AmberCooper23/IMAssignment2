@@ -99,3 +99,25 @@
   color: #856404;
   text-align: center;
 }
+
+.learningLayer {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 2px solid transparent;
+  background: #f0fdf4; /* same as BlueNudgeSuccess */
+  border-color: #bbf7d0;
+}
+
+.learningTitle {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  color: #111827;
+}
+
+.learningText {
+  font-size: 0.95rem;
+  color: #374151;
+  line-height: 1.4;
+}

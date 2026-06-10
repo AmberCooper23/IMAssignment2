@@ -1,7 +1,7 @@
 import React from "react";
 import { GoogleLogin } from "@react-oauth/google";
 import { jwtDecode } from "jwt-decode";
-import Profile from "../../pages/Profile/Profile"; // keep Profile
+import Profile from "../../pages/Profile/Profile";
 import "./LogIn.css";
 
 function LoginPage({ user, setUser }) {
@@ -11,9 +11,8 @@ function LoginPage({ user, setUser }) {
       id: decoded.sub,
       name: decoded.name,
       email: decoded.email,
-      // picture removed
     };
-    setUser(loggedInUser); // update global state in App.jsx
+    setUser(loggedInUser);
   };
 
   return (

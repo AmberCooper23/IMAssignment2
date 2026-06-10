@@ -2,7 +2,7 @@ import React from "react";
 import CTACard from "../../components/ctaCard/ctaCard";
 import StrategyTrackCard from "../../components/StrategyTrackCard/StrategyTrackCard";
 import ComparisonTable from "../../components/ComparisonTable/ComparisonTable";
-
+import Tooltip from "../../components/Tooltip/Tooltip"; 
 import "./StrategyTrack.css";
 
 function StrategyTrack({ user }) {
@@ -29,9 +29,9 @@ function StrategyTrack({ user }) {
         <ul className="chooseJourneyText">
           <li>
             Each track is designed for different financial goals and priorities.
-            Select the one that resonates with your current situation and
-            aspirations. You can switch tracks anytime as your priorities
-            evolve.
+            <Tooltip term="investments" /> Select the one that resonates with
+            your current situation and aspirations. You can switch tracks anytime
+            as your priorities evolve.
           </li>
         </ul>
       </section>
@@ -80,6 +80,18 @@ function StrategyTrack({ user }) {
 
       <section className="trackComparisonContainer">
         <ComparisonTable disabled={!user} />
+      </section>
+
+      {/* ✅ Educational explainer */}
+      <section className="learningLayer">
+        <h2 className="learningTitle">Why Strategy Tracks Matter</h2>
+        <p className="learningText">
+          Each archetype reflects a different financial philosophy. The Builder
+          focuses on <Tooltip term="homeLoan" />, the Explorer balances{" "}
+          <Tooltip term="investments" /> with lifestyle, and the Maverick
+          maximises <Tooltip term="offshoreInvestments" />. Understanding these
+          trade-offs helps you align your plan with long-term goals.
+        </p>
       </section>
     </main>
   );
