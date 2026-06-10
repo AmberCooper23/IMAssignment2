@@ -5,12 +5,13 @@
 }
 
 .expenseDonut {
-flex: 1;}
+  flex: 1;
+}
 
 .percentList {
   list-style: none;
   padding: 0;
-  margin-left: 2.5rem;  /* space between chart and list */
+  margin-left: 2.5rem;
   font-weight: bold;
   flex: 1;
 }

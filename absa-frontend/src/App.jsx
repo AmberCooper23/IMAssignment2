@@ -11,7 +11,9 @@ import ProgressMap from "./pages/ProgressMap/ProgressMap";
 import LuxuryCarSimLab from "./pages/LuxuryCarSimLab/LuxuryCarSimLab";
 import PropertySimLab from "./pages/PropertySimLab/PropertySimLab";
 import LocalVsOffshoreSimLab from "./pages/LocalVsOffshoreSimLab/LocalVsOffshoreSimLab";
-import FirstPropertyPath from "./pages/FirstPropertyPage/FirstProperty";
+import BuilderTrack from "./pages/BuilderTrack/BuilderTrack";
+import ExplorerTrack from "./pages/ExplorerTrack/ExplorerTrack";
+import MaverickTrack from "./pages/MaverickTrack/MaverickTrack";
 import BudgetPlan from "./pages/BudgetPlan/BudgetPlan";
 
 import { FinanceProvider } from "./context/FinanceContext";
@@ -43,9 +45,14 @@ function App() {
                 path="/simulation/local-vs-offshore"
                 element={<LocalVsOffshoreSimLab />}
               />
+              <Route path="/tracks/builder-track" element={<BuilderTrack />} />
               <Route
-                path="/tracks/first-property"
-                element={<FirstPropertyPath />}
+                path="/tracks/explorer-track"
+                element={<ExplorerTrack />}
+              />
+              <Route
+                path="/tracks/maverick-track"
+                element={<MaverickTrack />}
               />
               <Route path="/budgetPlan" element={<BudgetPlan />} />
             </Routes>

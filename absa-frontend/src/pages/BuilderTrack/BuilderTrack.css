@@ -1,0 +1,266 @@
+.trackContainer {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.trackHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.trackHeaderContent {
+  flex: 1;
+}
+
+.trackTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: #fff;
+}
+
+.trackDescription {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.trackPriorities {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.priorityButton {
+  background: #fff;
+  color: #2563eb;
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.nudgesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.nudgeCard {
+  border-radius: 0.75rem;
+  padding: 1rem;
+  border: 2px solid transparent;
+}
+
+.nudgeWarning {
+  background: #fff7ed;
+  border-color: #fed7aa;
+}
+
+.nudgeSuccess {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.nudgeTitle {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #111827;
+}
+
+.nudgeMessage {
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.timelineCard {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.timelineTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.timelineItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.timelineCircle {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #fff;
+}
+
+.timelineCircleComplete {
+  background: #2563eb;
+}
+
+.timelineCirclePending {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.milestoneCard {
+  flex: 1;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+.milestoneTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.milestoneDescription {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.progressBar {
+  background: #e5e7eb;
+  border-radius: 0.5rem;
+  height: 8px;
+  margin: 0.5rem 0;
+}
+
+.progressFill {
+  background: #2563eb;
+  height: 100%;
+  border-radius: 0.5rem;
+}
+
+.progressValue {
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.nextStep {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #374151;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.tradeoffsForecastGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.tradeoffsCard {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #111827;
+  text-align: left;
+}
+
+.tradeoffItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: #e38b8b3a;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tradeoffTitle {
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.25rem;
+  text-align: left;
+}
+
+.tradeoffText {
+  font-size: 0.875rem;
+  color: #6b7280;
+  text-align: left;
+}
+
+.forecastCard {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+.forecastContainer {
+  gap: 0.5rem;
+  background: #8be39a3a;
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.forecastOutcome {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.forecastLabel {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.forecastStats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.forecastRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: #374151;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.forecastRow:last-child {
+  border-bottom: none;
+}
