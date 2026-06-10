@@ -84,3 +84,14 @@
     flex-direction: column;
   }
 }
+
+.loginNotice {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: 6px;
+  color: #856404;
+  text-align: center;
+}
+

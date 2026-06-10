@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import StrategyTrackContext from "../../context/StrategyTrackContext";
 import "./StrategyMilestones.css";
 
-function StrategyTrackMilestones() {
+function StrategyTrackMilestones({ user }) {
   const { tracks } = useContext(StrategyTrackContext);
 
   return (
@@ -21,7 +21,7 @@ function StrategyTrackMilestones() {
               </div>
               <div className="completionTopRight">
                 <span className="completionText">
-                  {completed}/{track.milestones.length} Complete
+                  {user ? `${completed}/${track.milestones.length} Complete` : "Progress available when logged in"}
                 </span>
               </div>
             </header>
@@ -34,13 +34,15 @@ function StrategyTrackMilestones() {
                 >
                   <div className="milestoneTop">
                     <span className="milestoneYear">Year {m.year}</span>
-                    <span className="milestonePercent">{Math.round(m.progress)}%</span>
+                    <span className="milestonePercent">
+                      {user ? `${Math.round(m.progress)}%` : "—"}
+                    </span>
                   </div>
                   <p className="milestoneTitle">{m.title}</p>
                   <div className={`progressBar ${m.progress === 0 ? "noProgress" : ""}`}>
                     <div
                       className="progressFill"
-                      style={{ width: `${Math.round(m.progress)}%` }}
+                      style={{ width: user ? `${Math.round(m.progress)}%` : "0%" }}
                     ></div>
                   </div>
                 </div>
@@ -51,7 +53,9 @@ function StrategyTrackMilestones() {
               <div className="statusBanner">
                 <span className="statusEmoji">💪</span>
                 <span className="statusText">
-                  You have {inProgress} milestones in progress on this track!
+                  {user
+                    ? `You have ${inProgress} milestones in progress on this track!`
+                    : "Log in to track your milestone progress."}
                 </span>
               </div>
             </footer>

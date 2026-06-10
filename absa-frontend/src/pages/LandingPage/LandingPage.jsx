@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import FeatureCard from "../../components/FeatureCard/FeatureCard";
 
 import "./LandingPage.css";
@@ -7,6 +8,8 @@ import heroImage from "../../assets/sunsetCity.png";
 import contextImage from "../../assets/apartmentView.png";
 
 function LandingPage() {
+  const navigate = useNavigate();
+
   return (
     <main>
       <header className="hero">
@@ -16,11 +19,12 @@ function LandingPage() {
           </p>
           <h1 className="heroTitle">Design Your First Five Years of Wealth</h1>
           <p className="heroSubtitle">
-            {" "}
             A gamified, narrative driven companion to help you navigate
             property, investments, and lifestyle choices with confidence.
           </p>
-          <button className="ctaButton">Begin your journey!</button>
+          <button className="ctaButton" onClick={() => navigate("/login")}>
+            Begin your journey!
+          </button>
 
           <ul className="criteria">
             <li>
@@ -73,13 +77,12 @@ function LandingPage() {
           ]}
           className="greenCard"
         />
-
         <FeatureCard
           title="Simulation Lab"
-          description="Test financial decisions with interactive scenarios and ssee the 5 year impact"
+          description="Test financial decisions with interactive scenarios and see the 5 year impact"
           items={[
             "Property vs Renting",
-            "Luxury Card vs Investment",
+            "Luxury Car vs Investment",
             "Local vs Offshore",
           ]}
           className="orangeCard"
@@ -91,7 +94,7 @@ function LandingPage() {
           <img
             src={contextImage}
             alt="View looking out of the window of an apartment, overlooking the city during the day, seeing a busy road. Surrounding buildings look luxurious and modern."
-          ></img>
+          />
         </figure>
         <section className="contextContent">
           <h1 className="contextTitle">Built for South African Realities</h1>
@@ -136,7 +139,9 @@ function LandingPage() {
           Join thousands of young South African professionals taking control of
           their financial future.
         </p>
-        <button className="ctaFooterButton">Begin Your Journey!</button>
+        <button className="ctaFooterButton" onClick={() => navigate("/login")}>
+          Begin Your Journey!
+        </button>
       </section>
     </main>
   );

@@ -1,83 +1,83 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 
 const FinanceContext = createContext();
 
-function FinanceProvider({ children }) {
-  const [income, setIncome] = useState(70000);
-  const [tax, setTax] = useState(19357);
-  const [ra, setRa] = useState(11000);
-  const [medicalAid, setMedicalAid] = useState(9000);
+function FinanceProvider({ children, user }) {
+  // Default placeholders (for logged-out users)
+  const defaultFinance = {
+    income: 0,
+    tax: 0,
+    ra: 0,
+    medicalAid: 0,
+    savingsRate: 0,
+    emergencyFund: 0,
+    tfsa: 0,
+    investments: 0,
+    offshoreInvestments: 0,
+    studentLoan: 0,
+    homeLoan: 0,
+    carLoan: 0,
+    personalLoan: 0,
+  };
 
-  const [savingsRate, setSavingsRate] = useState(25);
-  const [emergencyFund, setEmergencyFund] = useState(150000);
-  const [tfsa, setTfsa] = useState(36000);
-  const [investments, setInvestments] = useState(50000);
-  const [offshoreInvestments, setOffshoreInvestments] = useState(5000);
+  const [financeData, setFinanceData] = useState(defaultFinance);
 
-  const [studentLoan, setStudentLoan] = useState(0);
-  const [studentLoanOriginal] = useState(150000);
-  const [studentLoanPayment, setStudentLoanPayment] = useState(0);
+  // Load user-specific finance data from localStorage when logged in
+  useEffect(() => {
+    if (user) {
+      const savedFinance = localStorage.getItem(
+        `finance_${user.id || user.email}`,
+      );
+      if (savedFinance) {
+        setFinanceData(JSON.parse(savedFinance));
+      } else {
+        // If no saved data, start with defaults
+        setFinanceData(defaultFinance);
+      }
+    } else {
+      // Reset to defaults when logged out
+      setFinanceData(defaultFinance);
+    }
+  }, [user]);
 
-  const [homeLoan, setHomeLoan] = useState(1200000);
-  const [homeLoanOriginal] = useState(1500000);
-  const [homeLoanPayment, setHomeLoanPayment] = useState(16000);
+  // Save finance data to localStorage whenever it changes (only if logged in)
+  useEffect(() => {
+    if (user) {
+      localStorage.setItem(
+        `finance_${user.id || user.email}`,
+        JSON.stringify(financeData),
+      );
+    }
+  }, [user, financeData]);
 
-  const [carLoan, setCarLoan] = useState(12000);
-  const [carLoanOriginal] = useState(24000);
-  const [carLoanPayment, setCarLoanPayment] = useState(2200);
+  // Derived values
+  const takeHome =
+    financeData.income -
+    financeData.tax -
+    financeData.ra -
+    financeData.medicalAid;
 
-  const [personalLoan, setPersonalLoan] = useState(0);
-  const [personalLoanOriginal] = useState(0);
-  const [personalLoanPayment, setPersonalLoanPayment] = useState(0);
+  const totalDebt =
+    financeData.studentLoan +
+    financeData.homeLoan +
+    financeData.carLoan +
+    financeData.personalLoan;
 
-  const takeHome = income - tax - ra - medicalAid;
-  const totalDebt = studentLoan + homeLoan + carLoan + personalLoan;
-  const deductions = tax + ra + medicalAid;
-  const totalSavings = emergencyFund + tfsa + investments;
+  const deductions = financeData.tax + financeData.ra + financeData.medicalAid;
+
+  const totalSavings =
+    financeData.emergencyFund + financeData.tfsa + financeData.investments;
+
   const offshorePercent =
-    investments > 0 ? (offshoreInvestments / investments) * 100 : 0;
+    financeData.investments > 0
+      ? (financeData.offshoreInvestments / financeData.investments) * 100
+      : 0;
 
   return (
     <FinanceContext.Provider
       value={{
-        income,
-        setIncome,
-        tax,
-        setTax,
-        ra,
-        setRa,
-        medicalAid,
-        setMedicalAid,
-        savingsRate,
-        setSavingsRate,
-        emergencyFund,
-        setEmergencyFund,
-        tfsa,
-        setTfsa,
-        investments,
-        setInvestments,
-        offshoreInvestments,
-        setOffshoreInvestments,
-        studentLoan,
-        setStudentLoan,
-        studentLoanOriginal,
-        studentLoanPayment,
-        setStudentLoanPayment,
-        homeLoan,
-        setHomeLoan,
-        homeLoanOriginal,
-        homeLoanPayment,
-        setHomeLoanPayment,
-        carLoan,
-        setCarLoan,
-        carLoanOriginal,
-        carLoanPayment,
-        setCarLoanPayment,
-        personalLoan,
-        setPersonalLoan,
-        personalLoanOriginal,
-        personalLoanPayment,
-        setPersonalLoanPayment,
+        ...financeData,
+        setFinanceData,
         takeHome,
         totalDebt,
         deductions,

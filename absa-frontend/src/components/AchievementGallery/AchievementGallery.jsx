@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import FinanceContext from "../../context/FinanceContext";
 import "./AchievementGallery.css";
 
-function AchievementGallery() {
+function AchievementGallery({ user }) {
   const {
     emergencyFund,
     tfsa,
@@ -18,8 +18,7 @@ function AchievementGallery() {
     ra,
   } = useContext(FinanceContext);
 
-  const totalDebtOriginal =
-    studentLoanOriginal + carLoanOriginal + homeLoanOriginal;
+  const totalDebtOriginal = studentLoanOriginal + carLoanOriginal + homeLoanOriginal;
   const totalDebtCurrent = studentLoan + carLoan + homeLoan;
   const debtPaidPercent =
     totalDebtOriginal > 0
@@ -30,37 +29,37 @@ function AchievementGallery() {
     {
       title: "Emergency Fund Starter",
       description: "Saved your first R10,000 in emergency funds",
-      unlocked: emergencyFund >= 10000,
+      unlocked: user ? emergencyFund >= 10000 : false,
       emoji: "💪",
     },
     {
       title: "RA Champion",
       description: "Contributing 10%+ to your Retirement Annuity",
-      unlocked: income > 0 && ra / income >= 0.1,
+      unlocked: user ? income > 0 && ra / income >= 0.1 : false,
       emoji: "🏆",
     },
     {
       title: "TFSA Explorer",
       description: "Opened and funded your Tax-Free Savings Account",
-      unlocked: tfsa > 0,
+      unlocked: user ? tfsa > 0 : false,
       emoji: "🎯",
     },
     {
       title: "Debt Defeater",
       description: "Pay off 25% of your total debt",
-      unlocked: debtPaidPercent >= 25,
+      unlocked: user ? debtPaidPercent >= 25 : false,
       emoji: "⚔️",
     },
     {
       title: "Offshore Pioneer",
       description: "Allocate 10% of portfolio to offshore investments",
-      unlocked: offshorePercent >= 10,
+      unlocked: user ? offshorePercent >= 10 : false,
       emoji: "🌍",
     },
     {
       title: "Emergency Fund Master",
       description: "Save 6 months of expenses",
-      unlocked: emergencyFund >= (income / 2) * 6,
+      unlocked: user ? emergencyFund >= (income / 2) * 6 : false,
       emoji: "🛡️",
     },
   ];
@@ -68,6 +67,12 @@ function AchievementGallery() {
   return (
     <section className="achievementGalleryWrapper">
       <h2 className="achievementGalleryTitle">Achievement Gallery</h2>
+      {!user && (
+        <p className="achievementNotice">
+          Explore the types of achievements you can unlock by saving, investing,
+          and managing debt. Log in to see your personalized progress.
+        </p>
+      )}
       <section className="achievementGrid">
         {achievements.map((ach, index) => (
           <article
@@ -75,13 +80,12 @@ function AchievementGallery() {
             className={`achievementCard ${ach.unlocked ? "unlocked" : "locked"}`}
           >
             <p className="emojiIcon">{ach.emoji}</p>
-
             <header>
               <h3>{ach.title}</h3>
             </header>
             <p className="description">{ach.description}</p>
 
-            {ach.unlocked ? (
+            {ach.unlocked && user ? (
               <svg
                 className="checkIcon"
                 xmlns="http://www.w3.org/2000/svg"

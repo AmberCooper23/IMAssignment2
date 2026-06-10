@@ -1,68 +1,67 @@
 .strategyTrack {
-    margin-top: 3rem;
-    padding: 2rem;
+  margin-top: 3rem;
+  padding: 2rem;
 }
 
 .strategyTrackTitle {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: left;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: left;
 }
 
 .strategyTrackSubtitle {
-    font-size: 1.2rem;
-    text-align: left; 
-    margin-top: 0rem;
+  font-size: 1.2rem;
+  text-align: left;
+  margin-top: 0rem;
 }
 
 .chooseJourney {
-    background-color: #e74d3c2e;
-    border-radius: 10px;
+  background-color: #e74d3c2e;
+  border-radius: 10px;
 }
 
 .chooseJourneyTitle {
-    font-size: 1.5rem;
-    text-align: left;
-    padding-left: 1rem;
-    padding-top: 1rem;
-    margin-bottom: 0;
+  font-size: 1.5rem;
+  text-align: left;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  margin-bottom: 0;
 }
 
 .chooseJourneyText {
-    font-size: 0.95rem;
-    text-align: left;
-    padding-left: 1rem;
-    padding-bottom: 1rem;
-    color: rgb(59, 59, 59);
-    white-space: pre-line;
-    list-style: none;
+  font-size: 0.95rem;
+  text-align: left;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  color: rgb(59, 59, 59);
+  white-space: pre-line;
+  list-style: none;
 }
 
 .trackCardContainer {
-    display: flex;
-    gap: 2.5rem;
-    margin-top: 2rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
 
 .trackComparisonContainer {
-    margin-top: 2rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+  margin-top: 2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
 }
-
 
 .blueStratCard {
   background-color: #71aef3;
 }
 
 .blueStratCard li {
-    background-color: white;
-    list-style: decimal;
+  background-color: white;
+  list-style: decimal;
 }
 .blueStratCard li::marker {
-color: #71aef3;
+  color: #71aef3;
 }
 
 .greenStratCard {
@@ -70,23 +69,33 @@ color: #71aef3;
 }
 
 .greenStratCard li {
-    background-color: white;
-    list-style: decimal;
+  background-color: white;
+  list-style: decimal;
 }
 
 .greenStratCard li::marker {
-    color: #22972a;
+  color: #22972a;
 }
 
 .orangeStratCard {
-    background-color: #f2bc60;
+  background-color: #f2bc60;
 }
 
 .orangeStratCard li {
-    background-color: white;
-    list-style: decimal;
+  background-color: white;
+  list-style: decimal;
 }
 
 .orangeStratCard li::marker {
-    color: #f2bc60;
+  color: #f2bc60;
+}
+
+.loginNotice {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: 6px;
+  color: #856404;
+  text-align: center;
 }

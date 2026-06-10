@@ -3,7 +3,7 @@ import FinanceContext from "./FinanceContext";
 
 const StrategyTrackContext = createContext();
 
-function StrategyTrackProvider({ children }) {
+function StrategyTrackProvider({ children, user }) {
   const {
     emergencyFund,
     ra,
@@ -13,8 +13,11 @@ function StrategyTrackProvider({ children }) {
     homeLoan,
     carLoan,
     studentLoan,
-    totalDebt
+    totalDebt,
   } = useContext(FinanceContext);
+
+  // Helper: if not logged in, return 0 progress
+  const progressValue = (val) => (user ? val : 0);
 
   const tracks = [
     {
@@ -25,29 +28,29 @@ function StrategyTrackProvider({ children }) {
         {
           year: 1,
           title: "Emergency Fund",
-          progress: Math.min((emergencyFund / 250000) * 100, 100) 
+          progress: progressValue(Math.min((emergencyFund / 250000) * 100, 100)),
         },
         {
           year: 2,
           title: "Deposit Ready",
-          progress: Math.min((emergencyFund / 500000) * 100, 100) 
+          progress: progressValue(Math.min((emergencyFund / 500000) * 100, 100)),
         },
         {
           year: 3,
           title: "Bond Approval",
-          progress: homeLoan < 1500000 ? 100 : 0 
+          progress: progressValue(homeLoan < 1500000 ? 100 : 0),
         },
         {
           year: 4,
           title: "Property Purchase",
-          progress: homeLoan < 1200000 ? 100 : 0 
+          progress: progressValue(homeLoan < 1200000 ? 100 : 0),
         },
         {
           year: 5,
           title: "Homeowner",
-          progress: homeLoan <= 0 ? 100 : 0
-        }
-      ]
+          progress: progressValue(homeLoan <= 0 ? 100 : 0),
+        },
+      ],
     },
     {
       id: "explorer",
@@ -57,29 +60,29 @@ function StrategyTrackProvider({ children }) {
         {
           year: 1,
           title: "RA Contributions",
-          progress: income > 0 ? Math.min((ra / income) * 100, 100) : 0
+          progress: progressValue(income > 0 ? Math.min((ra / income) * 100, 100) : 0),
         },
         {
           year: 2,
           title: "Balanced Portfolio",
-          progress: investments > 0 ? Math.min((investments / 200000) * 100, 100) : 0
+          progress: progressValue(investments > 0 ? Math.min((investments / 200000) * 100, 100) : 0),
         },
         {
           year: 3,
           title: "Offshore Start",
-          progress: offshorePercent >= 5 ? 100 : offshorePercent * 20 
+          progress: progressValue(offshorePercent >= 5 ? 100 : offshorePercent * 20),
         },
         {
           year: 4,
           title: "Diversified Growth",
-          progress: investments >= 500000 ? 100 : (investments / 500000) * 100
+          progress: progressValue(investments >= 500000 ? 100 : (investments / 500000) * 100),
         },
         {
           year: 5,
           title: "20% Offshore",
-          progress: offshorePercent >= 20 ? 100 : offshorePercent * 5
-        }
-      ]
+          progress: progressValue(offshorePercent >= 20 ? 100 : offshorePercent * 5),
+        },
+      ],
     },
     {
       id: "maverick",
@@ -89,30 +92,30 @@ function StrategyTrackProvider({ children }) {
         {
           year: 1,
           title: "Max RA",
-          progress: income > 0 ? Math.min((ra / (income * 0.275)) * 100, 100) : 0 
+          progress: progressValue(income > 0 ? Math.min((ra / (income * 0.275)) * 100, 100) : 0),
         },
         {
           year: 2,
           title: "Offshore Allocation",
-          progress: offshorePercent
+          progress: progressValue(offshorePercent),
         },
         {
           year: 3,
           title: "Tech Exposure",
-          progress: 0 
+          progress: progressValue(0),
         },
         {
           year: 4,
           title: "Currency Diversification",
-          progress: offshorePercent >= 15 ? 100 : offshorePercent * 6.6
+          progress: progressValue(offshorePercent >= 15 ? 100 : offshorePercent * 6.6),
         },
         {
           year: 5,
           title: "Diversified Global Portfolio",
-          progress: offshorePercent >= 30 ? 100 : offshorePercent * 3.3
-        }
-      ]
-    }
+          progress: progressValue(offshorePercent >= 30 ? 100 : offshorePercent * 3.3),
+        },
+      ],
+    },
   ];
 
   return (

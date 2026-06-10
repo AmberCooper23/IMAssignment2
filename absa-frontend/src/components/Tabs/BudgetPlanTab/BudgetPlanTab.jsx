@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import "./BudgetPlanTab.css";
 
-function BudgetPlanTab() {
+function BudgetPlanTab({ disabled }) {
   const [categories, setCategories] = useState([
-    {
-      name: "Income",
-      items: [{ label: "Salary", budget: "", spent: "" }],
-    },
+    { name: "Income", items: [{ label: "Salary", budget: "", spent: "" }] },
     {
       name: "Personal",
       items: [
@@ -24,6 +21,7 @@ function BudgetPlanTab() {
   ]);
 
   const updateItem = (catIndex, itemIndex, field, rawValue) => {
+    if (disabled) return; // block edits if not logged in
     const newCategories = [...categories];
 
     if (field !== "label") {
@@ -45,6 +43,7 @@ function BudgetPlanTab() {
   };
 
   const addItemAfter = (catIndex, itemIndex) => {
+    if (disabled) return; // block adding rows if not logged in
     const newCategories = [...categories];
     newCategories[catIndex].items.splice(itemIndex + 1, 0, {
       label: "New Item",
@@ -62,16 +61,16 @@ function BudgetPlanTab() {
 
   const totalBudget = categories.reduce(
     (sum, cat) => sum + categoryTotals(cat).budget,
-    0,
+    0
   );
   const totalSpent = categories.reduce(
     (sum, cat) => sum + categoryTotals(cat).spent,
-    0,
+    0
   );
   const totalDiff = totalBudget - totalSpent;
 
   return (
-    <section className="budgetPlanTab">
+    <section className={`budgetPlanTab ${disabled ? "disabled" : ""}`}>
       <header className="budgetPlanHeader">
         <h1 className="budgetPlanTitle">Monthly Budget Planner</h1>
         <p className="budgetPlanSubtitle">
@@ -103,13 +102,9 @@ function BudgetPlanTab() {
                         type="text"
                         value={item.label}
                         onChange={(e) =>
-                          updateItem(
-                            catIndex,
-                            itemIndex,
-                            "label",
-                            e.target.value,
-                          )
+                          updateItem(catIndex, itemIndex, "label", e.target.value)
                         }
+                        disabled={disabled}
                       />
                     </td>
                     <td>
@@ -119,13 +114,9 @@ function BudgetPlanTab() {
                         placeholder="0"
                         value={item.budget}
                         onChange={(e) =>
-                          updateItem(
-                            catIndex,
-                            itemIndex,
-                            "budget",
-                            e.target.value,
-                          )
+                          updateItem(catIndex, itemIndex, "budget", e.target.value)
                         }
+                        disabled={disabled}
                       />
                     </td>
                     <td>
@@ -135,13 +126,9 @@ function BudgetPlanTab() {
                         placeholder="0"
                         value={item.spent}
                         onChange={(e) =>
-                          updateItem(
-                            catIndex,
-                            itemIndex,
-                            "spent",
-                            e.target.value,
-                          )
+                          updateItem(catIndex, itemIndex, "spent", e.target.value)
                         }
+                        disabled={disabled}
                       />
                     </td>
                     <td className="diffCell">
@@ -152,6 +139,7 @@ function BudgetPlanTab() {
                         type="button"
                         className="addRowBtn"
                         onClick={() => addItemAfter(catIndex, itemIndex)}
+                        disabled={disabled}
                       >
                         +
                       </button>
@@ -159,18 +147,10 @@ function BudgetPlanTab() {
                   </tr>
                 ))}
                 <tr className="categoryTotalsRow">
-                  <td>
-                    <strong>Total</strong>
-                  </td>
-                  <td>
-                    <strong>{totals.budget}</strong>
-                  </td>
-                  <td>
-                    <strong>{totals.spent}</strong>
-                  </td>
-                  <td>
-                    <strong>{totals.diff}</strong>
-                  </td>
+                  <td><strong>Total</strong></td>
+                  <td><strong>{totals.budget}</strong></td>
+                  <td><strong>{totals.spent}</strong></td>
+                  <td><strong>{totals.diff}</strong></td>
                   <td></td>
                 </tr>
               </tbody>
@@ -180,16 +160,16 @@ function BudgetPlanTab() {
       })}
 
       <div className="budgetTotals">
-        <p>
-          <strong>Overall Budget:</strong> R{totalBudget}
-        </p>
-        <p>
-          <strong>Overall Spent:</strong> R{totalSpent}
-        </p>
-        <p>
-          <strong>Overall Difference:</strong> R{totalDiff}
-        </p>
+        <p><strong>Overall Budget:</strong> R{totalBudget}</p>
+        <p><strong>Overall Spent:</strong> R{totalSpent}</p>
+        <p><strong>Overall Difference:</strong> R{totalDiff}</p>
       </div>
+
+      {disabled && (
+        <div className="loginNotice">
+          <p>You can view this planner, but you must log in to edit or save changes.</p>
+        </div>
+      )}
     </section>
   );
 }

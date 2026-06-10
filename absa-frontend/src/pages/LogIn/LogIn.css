@@ -1,0 +1,75 @@
+/* Page wrapper */
+.loginPageWrapper {
+  min-height: 100vh;              /* full viewport height */
+  display: flex;
+  flex-direction: column;         /* stack card + footer */
+}
+
+/* Center the card in the available space */
+.loginContent {
+  flex: 1;                        /* take remaining space */
+  display: flex;
+  align-items: center;            /* vertical center */
+  justify-content: center;        /* horizontal center */
+}
+
+/* Footer pinned to bottom */
+.loginFooter {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Your existing card styles */
+.loginCard {
+  max-width: 360px;
+  margin: 0 auto;                 /* center horizontally */
+  padding: 2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease;
+}
+
+.loginCard:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.loginCard h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.loginCard p {
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.loginCard button {
+  display: inline-block;
+  width: 100%;
+  padding: 0.75rem 1.2rem;
+  background: #4285f4; /* Google blue */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.loginCard button:hover {
+  background: #3367d6;
+  transform: translateY(-2px);
+}
+
+.loginCard button:active {
+  transform: translateY(0);
+}

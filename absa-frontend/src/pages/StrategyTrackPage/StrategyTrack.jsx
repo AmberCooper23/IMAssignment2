@@ -5,7 +5,7 @@ import ComparisonTable from "../../components/ComparisonTable/ComparisonTable";
 
 import "./StrategyTrack.css";
 
-function StrategyTrack() {
+function StrategyTrack({ user }) {
   return (
     <main className="strategyTrack">
       <header className="strategyTrackHeader">
@@ -14,6 +14,15 @@ function StrategyTrack() {
           Choose your financial archetype and follow a curated 5 year plan
         </p>
       </header>
+
+      {!user && (
+        <div className="loginNotice">
+          <p>
+            You can explore the tracks, but you must log in to save progress or
+            switch archetypes.
+          </p>
+        </div>
+      )}
 
       <section className="chooseJourney">
         <h1 className="chooseJourneyTitle">Choose Your Journey</h1>
@@ -39,7 +48,7 @@ function StrategyTrack() {
           ]}
           milestones={["Emergency Fund", "Deposit Ready", "Bond Approval"]}
           className="blueStratCard"
-          to="/tracks/builder-track"
+          to={user ? "/tracks/builder-track" : null}
         />
         <StrategyTrackCard
           strategyTrack="Balanced Lifestyle & Investing"
@@ -55,7 +64,7 @@ function StrategyTrack() {
             "Balanced Portfolio",
             "Offshore Start",
           ]}
-          to="/tracks/explorer-track"
+          to={user ? "/tracks/explorer-track" : null}
           className="greenStratCard"
         />
         <StrategyTrackCard
@@ -64,13 +73,13 @@ function StrategyTrack() {
           description="Maximise offshore exposure and tech stocks for long term wealth building"
           priorities={["Offshore ETFs", "Tech stocks", "Aggressive growth"]}
           milestones={["Max RA", "Offshore Allocation", "Tech Exposure"]}
-          to="/tracks/maverick-track"
+          to={user ? "/tracks/maverick-track" : null}
           className="orangeStratCard"
         />
       </section>
 
       <section className="trackComparisonContainer">
-        <ComparisonTable />
+        <ComparisonTable disabled={!user} />
       </section>
     </main>
   );

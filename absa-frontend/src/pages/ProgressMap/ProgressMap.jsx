@@ -1,13 +1,26 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import FinanceContext from "../../context/FinanceContext";
 import GoalsContext from "../../context/GoalsContext";
 import "./ProgressMap.css";
 import AchievementGallery from "../../components/AchievementGallery/AchievementGallery";
 import StrategyMilestones from "../../components/StrategyMilestones/StrategyMilestones";
 
-function ProgressMap() {
-        const {emergencyFund, tfsa, investments, studentLoan, carLoan, homeLoan, personalLoan} = useContext(FinanceContext);
-        const {goalEmergencyFund, goalTfsaAnnual, goalInvestments, goalDebtFreeYear} = useContext(GoalsContext);
+function ProgressMap({ user }) {
+  const {
+    emergencyFund,
+    tfsa,
+    investments,
+    studentLoan,
+    carLoan,
+    homeLoan,
+    personalLoan,
+  } = useContext(FinanceContext);
+  const {
+    goalEmergencyFund,
+    goalTfsaAnnual,
+    goalInvestments,
+    goalDebtFreeYear,
+  } = useContext(GoalsContext);
 
   const achievements = [
     {
@@ -38,45 +51,66 @@ function ProgressMap() {
     {
       title: "Emergency Fund Master",
       description: "Save 6 months of expenses",
-      unlocked: false
-    }
+      unlocked: false,
+    },
   ];
 
-        const completed = achievements.filter(a => a.unlocked).length;
-        const total = achievements.length;
-        const progress = (completed / total) * 100;
+  const completed = achievements.filter((a) => a.unlocked).length;
+  const total = achievements.length;
+  const progress = (completed / total) * 100;
 
-        return (
-       <main className="progressMap">
-        <header className="progressMapHeader">
-            <h1 className="progressMapTitle">Progress Map</h1>
-            <p className="snapshotSubtitle"> Track your milestones and celebrate your achievements! </p>
-        </header> 
+  return (
+    <main className="progressMap">
+      <header className="progressMapHeader">
+        <h1 className="progressMapTitle">Progress Map</h1>
+        <p className="snapshotSubtitle">
+          Track your milestones and celebrate your achievements!
+        </p>
+      </header>
 
-        <section className="progressBanner">
-            <section className="progressBannerHeader">
-                <article>
-                <h2 className="progressBannerTitle">Your Journey Progress</h2>
-                <p className="progressBannerText">Keep building your financial future, one milestone at a time.</p>
-                </article>
-                <span className="progressBannerCount">
-                    <strong>{completed}/{total}</strong>
-                    <div className="progressBannerLabel">Achievements</div>
-                </span>
-            </section>
-            
-        <progress value={progress} max="100" className="progressBar">
-        {progress}%
-      </progress>
+      {!user && (
+        <div className="loginNotice">
+          <p>
+            You can explore the Progress Map, but you must log in to see your
+            actual numbers, save achievements, or update milestones.
+          </p>
+        </div>
+      )}
+
+      <section className="progressBanner">
+        <section className="progressBannerHeader">
+          <article>
+            <h2 className="progressBannerTitle">Your Journey Progress</h2>
+            <p className="progressBannerText">
+              {user
+                ? "Keep building your financial future, one milestone at a time."
+                : "This page shows how you can track savings, debt, and investment milestones over time. Log in to see your personalized journey."}
+            </p>
+          </article>
+          <span className="progressBannerCount">
+            <strong>{user ? `${completed}/${total}` : "—/—"}</strong>
+            <div className="progressBannerLabel">Achievements</div>
+          </span>
         </section>
-        <section className="achievements">
-          <AchievementGallery/>
-        </section>
-        <section className="milestones">
-          <StrategyMilestones/>
-        </section>
-    </main> 
-    );   
+
+        <progress
+          value={user ? progress : 0}
+          max="100"
+          className="progressBar"
+          disabled={!user}
+        >
+          {user ? `${progress}%` : "—"}
+        </progress>
+      </section>
+
+      <section className="achievements">
+        <AchievementGallery disabled={!user} />
+      </section>
+      <section className="milestones">
+        <StrategyMilestones disabled={!user} />
+      </section>
+    </main>
+  );
 }
 
 export default ProgressMap;

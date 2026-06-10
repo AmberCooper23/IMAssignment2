@@ -8,7 +8,7 @@ import DebtTab from "../../components/Tabs/DebtTab/DebtTab";
 import GoalsTab from "../../components/Tabs/GoalsTab/GoalsTab";
 import BudgetPlanTab from "../../components/Tabs/BudgetPlanTab/BudgetPlanTab";
 
-function MoneySnapshot() {
+function MoneySnapshot({ user }) {
   const [showModal, setShowModal] = useState(false);
   const [activeTab, setActiveTab] = useState("overview");
 
@@ -20,8 +20,12 @@ function MoneySnapshot() {
           <p className="snapshotSubtitle">
             Your financial character sheet for March 2026
           </p>
-          <button className="editProfileBtn" onClick={() => setShowModal(true)}>
-            Edit your financial profile
+          <button
+            className="editProfileBtn"
+            onClick={() => setShowModal(true)}
+            disabled={!user}
+          >
+            {user ? "Edit your financial profile" : "Login required to edit"}
           </button>
         </div>
       </header>
@@ -59,13 +63,27 @@ function MoneySnapshot() {
         </button>
       </nav>
 
-      {activeTab === "overview" && <OverviewTab />}
-      {activeTab === "savings" && <SavingsTab />}
-      {activeTab === "debt" && <DebtTab />}
-      {activeTab === "goals" && <GoalsTab />}
-      {activeTab === "budgetPlan" && <BudgetPlanTab />}
+      {/* Tabs always visible */}
+      {activeTab === "overview" && <OverviewTab disabled={!user} />}
+      {activeTab === "savings" && <SavingsTab disabled={!user} />}
+      {activeTab === "debt" && <DebtTab disabled={!user} />}
+      {activeTab === "goals" && <GoalsTab disabled={!user} />}
+      {activeTab === "budgetPlan" && <BudgetPlanTab disabled={!user} />}
 
-      {showModal && <EditProfileModal onClose={() => setShowModal(false)} />}
+      {/* Modal only works if logged in */}
+      {showModal && user && (
+        <EditProfileModal onClose={() => setShowModal(false)} />
+      )}
+
+      {/* Notice for logged-out users */}
+      {!user && (
+        <div className="loginNotice">
+          <p>
+            You can explore this snapshot, but you must log in to edit or save
+            changes.
+          </p>
+        </div>
+      )}
     </main>
   );
 }
