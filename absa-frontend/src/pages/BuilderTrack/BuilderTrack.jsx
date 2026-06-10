@@ -10,63 +10,69 @@ function BuilderTrack() {
   const builderTrack = tracks.find((t) => t.id === "builder");
 
   return (
-    <div className="trackContainer">
-      <div className="trackHeader">
-        <div className="trackIcon craneIcon"></div>
-        <h1 className="trackTitle">{builderTrack.name}</h1>
-        <p className="trackDescription">
+    <div className="BlueTrackContainer">
+      <div className="BlueTrackHeader">
+        <div className="BlueTrackIcon craneIcon"></div>
+        <h1 className="BlueTrackTitle">{builderTrack.name}</h1>
+        <p className="BlueTrackDescription">
           Focus on saving for property deposit and building credit for bond
           approval.
         </p>
-        <div className="trackPriorities">
-          <button className="priorityButton">Saving deposit</button>
-          <button className="priorityButton">Building credit</button>
-          <button className="priorityButton">Minimizing lifestyle creep</button>
+        <div className="BlueTrackPriorities">
+          <button className="BluePriorityButton">Saving deposit</button>
+          <button className="BluePriorityButton">Building credit</button>
+          <button className="BluePriorityButton">
+            Minimizing lifestyle creep
+          </button>
         </div>
       </div>
 
-      <div className="nudgesGrid">
-        <div className="nudgeCard nudgeWarning">
-          <div className="nudgeTitle">Nudge Alert</div>
-          <p className="nudgeMessage">
+      <div className="BlueNudgesGrid">
+        <div className="BlueNudgeCard BlueNudgeWarning">
+          <div className="BlueNudgeTitle">Nudge Alert</div>
+          <p className="BlueNudgeMessage">
             Your car repayment is slowing deposit saving! Consider a more
             affordable vehicle.
           </p>
         </div>
-        <div className="nudgeCard nudgeSuccess">
-          <div className="nudgeTitle">On Track</div>
-          <p className="nudgeMessage">Great progress on Year 1 milestones!</p>
+        <div className="BlueNudgeCard BlueNudgeSuccess">
+          <div className="BlueNudgeTitle">On Track</div>
+          <p className="BlueNudgeMessage">
+            Great progress on Year 1 milestones!
+          </p>
         </div>
       </div>
 
-      <div className="timelineCard">
-        <h2 className="timelineTitle">Your 5-Year Journey</h2>
+      <div className="BlueTimelineCard">
+        <h2 className="BlueTimelineTitle">Your 5-Year Journey</h2>
         {builderTrack.milestones.map((milestone, idx) => (
-          <div key={idx} className="timelineItem">
+          <div key={idx} className="BlueTimelineItem">
             <div
-              className={`timelineCircle ${
+              className={`BlueTimelineCircle ${
                 milestone.progress >= 100
-                  ? "timelineCircleComplete"
-                  : "timelineCirclePending"
+                  ? "BlueTimelineCircleComplete"
+                  : "BlueTimelineCirclePending"
               }`}
             >
               {`Y${milestone.year}`}
             </div>
 
-            <div className="milestoneCard">
-              <h3 className="milestoneTitle">{milestone.title}</h3>
-              <p className="milestoneDescription">{milestone.description}</p>
-              <div className="progressBar">
+            <div className="BlueMilestoneCard">
+              <h3 className="BlueMilestoneTitle">{milestone.title}</h3>
+              <p className="BlueMilestoneDescription">
+                {milestone.description}
+              </p>
+              <div className="BlueProgressBar">
                 <div
-                  className="progressFill"
+                  className="BlueProgressFill"
                   style={{ width: `${milestone.progress}%` }}
                 ></div>
               </div>
-              <div className="progressValue">
+              <div className="BlueProgressValue">
                 {milestone.progress}% Complete
               </div>
               {milestone.progress > 0 && milestone.progress < 100 && (
-                <div className="nextStep">
+                <div className="BlueNextStep">
                   <strong>Next Step:</strong> Continue your current savings rate
                   to reach this milestone by {2026 + milestone.year - 1}.
                 </div>

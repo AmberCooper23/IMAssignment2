@@ -1,10 +1,12 @@
-.trackContainer {
+
+.BlueTrackContainer {
   max-width: 100%;
   margin: 0 auto;
   padding: 2rem;
 }
 
-.trackHeader {
+
+.BlueTrackHeader {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,28 +18,28 @@
   margin-bottom: 2rem;
 }
 
-.trackHeaderContent {
+.BlueTrackHeaderContent {
   flex: 1;
 }
 
-.trackTitle {
+.BlueTrackTitle {
   font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 0.25rem;
   color: #fff;
 }
 
-.trackDescription {
+.BlueTrackDescription {
   font-size: 1rem;
   color: #fff;
 }
 
-.trackPriorities {
+.BlueTrackPriorities {
   display: flex;
   gap: 0.75rem;
 }
 
-.priorityButton {
+.BluePriorityButton {
   background: #fff;
   color: #2563eb;
   border: none;
@@ -47,41 +49,43 @@
   margin-top: 1rem;
 }
 
-.nudgesGrid {
+
+.BlueNudgesGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   margin-bottom: 2rem;
 }
 
-.nudgeCard {
+.BlueNudgeCard {
   border-radius: 0.75rem;
   padding: 1rem;
   border: 2px solid transparent;
 }
 
-.nudgeWarning {
+.BlueNudgeWarning {
   background: #fff7ed;
   border-color: #fed7aa;
 }
 
-.nudgeSuccess {
+.BlueNudgeSuccess {
   background: #f0fdf4;
   border-color: #bbf7d0;
 }
 
-.nudgeTitle {
+.BlueNudgeTitle {
   font-weight: 600;
   margin-bottom: 0.25rem;
   color: #111827;
 }
 
-.nudgeMessage {
+.BlueNudgeMessage {
   font-size: 0.875rem;
   color: #374151;
 }
 
-.timelineCard {
+
+.BlueTimelineCard {
   background: #fff;
   border: 1px solid #e5e7eb;
   border-radius: 0.75rem;
@@ -89,20 +93,20 @@
   margin-bottom: 2rem;
 }
 
-.timelineTitle {
+.BlueTimelineTitle {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
-.timelineItem {
+.BlueTimelineItem {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
   margin-bottom: 1.5rem;
 }
 
-.timelineCircle {
+.BlueTimelineCircle {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
@@ -113,16 +117,18 @@
   color: #fff;
 }
 
-.timelineCircleComplete {
+
+.BlueTimelineCircleComplete {
   background: #2563eb;
 }
 
-.timelineCirclePending {
+
+.BlueTimelineCirclePending {
   background: #e5e7eb;
   color: #374151;
 }
 
-.milestoneCard {
+.BlueMilestoneCard {
   flex: 1;
   background: #f9fafb;
   border: 1px solid #e5e7eb;
@@ -130,32 +136,32 @@
   padding: 1rem;
 }
 
-.milestoneTitle {
+.BlueMilestoneTitle {
   font-size: 1.125rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
 }
 
-.milestoneDescription {
+.BlueMilestoneDescription {
   font-size: 0.875rem;
   color: #6b7280;
   margin-bottom: 0.5rem;
 }
 
-.progressBar {
+.BlueProgressBar {
   background: #e5e7eb;
   border-radius: 0.5rem;
   height: 8px;
   margin: 0.5rem 0;
 }
 
-.progressFill {
+.BlueProgressFill {
   background: #2563eb;
   height: 100%;
   border-radius: 0.5rem;
 }
 
-.progressValue {
+.BlueProgressValue {
   font-weight: 600;
   color: #2563eb;
 }
@@ -170,12 +176,14 @@
   padding: 0.5rem;
 }
 
+
 .tradeoffsForecastGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   margin-top: 2rem;
 }
+
 
 .tradeoffsCard {
   background: #fff;
@@ -214,6 +222,7 @@
   color: #6b7280;
   text-align: left;
 }
+
 
 .forecastCard {
   background: #fff;
