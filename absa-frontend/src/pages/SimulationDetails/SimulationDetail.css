@@ -1,135 +1,200 @@
 .simulationDetail {
-    margin-top: 3rem;
-    padding: 2rem;
+  padding: 2rem;
+  background-color: #f5f7fa;
+  color: #333;
 }
 
-.simulationTitle {
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-align: left;
+.simulationHeader {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.simulationSubtitle {
-    font-size: 1.2rem;
-    text-align: left;
-    margin-top: 0;
+.simulationHeader h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.25rem;
 }
 
-.simulationInsightCard {
-    background-color: #e74d3c2e;
-    border-radius: 10px;
-    margin-top: 1rem;
+.simulationHeader p {
+  font-size: 1rem;
+  color: #555;
 }
 
-.insightCardTitle {
-    font-size: 1.5rem;
-    text-align: left;
-    padding-left: 1rem;
-    padding-top: 1rem;
-    margin-bottom: 0;
+.simulationGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: start;
 }
 
-.insightCardBody {
-    font-size: 0.95rem;
-    text-align: left;
-    padding-left: 1rem;
-    padding-bottom: 1rem;
-    color: rgb(59, 59, 59);
-    line-height: 1.6;
-    margin: 0;
+.inputsPanel {
+  background: #fff;
+  padding: 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-.sliderRow {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1rem;
-    margin-top: 2rem;
+.simLabBanner {
+  width: 100%;
+  margin: 0;
 }
 
-.sliderCard {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 1.25rem 1rem;
+.simLabBanner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
-.outputCardsRow {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 1.5rem;
+.inputsContent {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.verdictWrapper {
-    margin-top: 1.5rem;
+.inputsPanel label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #444;
+  font-size: 0.9rem;
 }
 
-@media (max-width: 1100px) {
-    .sliderRow {
-        grid-template-columns: repeat(3, 1fr);
-    }
+.withPrefix,
+.withSuffix {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  overflow: hidden;
 }
 
-@media (max-width: 700px) {
-    .sliderRow {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .outputCardsRow {
-        grid-template-columns: 1fr;
-    }
+.prefix,
+.suffix {
+  background: #f0f0f0;
+  padding: 0.5rem 0.75rem;
+  font-weight: 600;
+  color: #444;
+  font-size: 0.9rem;
 }
 
-.runButtonRow {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 1.5rem;
+.withPrefix input,
+.withSuffix input {
+  flex: 1;
+  border: none;
+  padding: 0.5rem;
+  font-size: 0.95rem;
+  outline: none;
+  background: transparent;
 }
 
-.runButton {
-    background-color: #e74c3c;
-    color: #ffffff;
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 0.75rem 2rem;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.2s, transform 0.1s;
+.CarInputs {
+  margin-bottom: 1rem;
 }
 
-.runButton:hover {
-    background-color: #d52f1c;
-    transform: translateY(-1px);
+.CarRow {
+  display: flex;
+  gap: 1rem;
 }
 
-.runButton:active {
-    transform: translateY(0);
+.CarRow label {
+  flex: 1;
+  font-weight: 600;
+  color: #444;
+  text-align: left;
+  font-size: 0.9rem;
 }
 
-.runButtonRan {
-    background-color: #16a34a;
+.CarRow .withPrefix,
+.CarRow .withSuffix {
+  flex: 1;
 }
 
-.runButtonRan:hover {
-    background-color: #15803d;
+.resultsPanel {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-.resultsSection {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 2rem;
-    animation: fadeSlideIn 0.35s ease;
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+  color: #222;
 }
 
-@keyframes fadeSlideIn {
-    from {
-        opacity: 0;
-        transform: translateY(12px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.graphContainer {
+  margin-bottom: 1.5rem;
+}
+
+.graphContainer h3 {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.carComparisonContainer {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.carComparison {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.carBlock {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: left;
+}
+
+.carBlock h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #222;
+}
+
+.carBlock p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.verdictTile {
+  border-top: 3px solid #4caf50;
+  padding-top: 1rem;
+  margin-top: 1.25rem;
+}
+
+.verdictTile.good {
+  border-color: #4caf50;
+}
+
+.verdictTile.bad {
+  border-color: #f44336;
+}
+
+.verdictTile h2 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.verdictTile ul {
+  margin: 0.5rem 0;
+  padding-left: 1.2rem;
+}
+
+.verdictTile li {
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
 }
